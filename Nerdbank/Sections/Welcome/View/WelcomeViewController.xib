@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Nerdbank" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sX5-kw-qfq">
+                    <rect key="frame" x="24" y="398" width="342" height="48"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-18-J23">
+                            <rect key="frame" x="0.0" y="0.0" width="161" height="48"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="tinted" title="Cadastrar"/>
+                            <connections>
+                                <action selector="singUpTapped:" destination="-1" eventType="touchUpInside" id="2c8-Pf-1jY"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-IT-Goz">
+                            <rect key="frame" x="181" y="0.0" width="161" height="48"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Entrar"/>
+                            <connections>
+                                <action selector="enterTapped:" destination="-1" eventType="touchUpInside" id="UTD-n4-2u4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="dsn-2S-6qj"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nerd Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-i3-dvW">
+                    <rect key="frame" x="24" y="311.66666666666669" width="342" height="38.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38.329999999999998" id="Kk7-0O-ANo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                    <color key="textColor" red="0.27637055329999999" green="0.27637055329999999" blue="0.27637055329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sX5-kw-qfq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="3AT-BD-PoC"/>
+                <constraint firstItem="sX5-kw-qfq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GF2-aO-9WG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sX5-kw-qfq" secondAttribute="trailing" constant="24" id="Jo4-6W-Fll"/>
+                <constraint firstItem="d5L-i3-dvW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="K7E-5m-d3S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d5L-i3-dvW" secondAttribute="trailing" constant="24" id="O97-yE-kP7"/>
+                <constraint firstItem="sX5-kw-qfq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="REv-hI-xSI"/>
+                <constraint firstItem="sX5-kw-qfq" firstAttribute="top" secondItem="d5L-i3-dvW" secondAttribute="bottom" constant="48" id="jt0-8Y-Oac"/>
+            </constraints>
+            <point key="canvasLocation" x="-166" y="-38"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
