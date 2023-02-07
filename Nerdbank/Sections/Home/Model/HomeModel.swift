@@ -9,5 +9,5 @@ import Foundation
 
 struct HomeModel {
     var balance: BalanceModel?
-    var transactions: TransactionsModel?
+    var extract: TransactionModel?
 }

@@ -19,11 +19,13 @@ class TransactionTableViewCell: UITableViewCell {
     
     // MARK: Setup Method
     
-    func setup(_ model: TransactionModel) {
-        transactionTypeLabel.text = model.transactionType
+    func setup(_ model: Transaction) {
+        transactionTypeLabel.text = model.transactionType == "TRANSFER" ? "Transferência" : "Pagamento de Conta"
         recipientNameLabel.text = model.recipientName
-        valueLabel.text = "R$ \(model.value)"
-        dateLabel.text = model.transactionDate
+        valueLabel.text = model.movementType == "OUT" ? "- \(model.formattedValue)" : model.formattedValue
+        let color: UIColor = model.movementType == "OUT" ? .red : .green
+        valueLabel.textColor = color
+        dateLabel.text = model.formattedDate
     }
   
 }

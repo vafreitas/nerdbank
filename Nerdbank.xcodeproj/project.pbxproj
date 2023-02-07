@@ -43,6 +43,18 @@
 		C3B402D528E0F9E0000A56C9 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B402D328E0F9E0000A56C9 /* TransactionTableViewCell.swift */; };
 		C3B402D628E0F9E0000A56C9 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B402D428E0F9E0000A56C9 /* TransactionTableViewCell.xib */; };
 		C3DA970928DFEE7800234FA3 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3DA970828DFEE7800234FA3 /* KeychainSwift */; };
+		C3DD8667294628B700BADBFC /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD8666294628B700BADBFC /* ProgressView.swift */; };
+		C3DD86692946292400BADBFC /* ProgressShapeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD86682946292400BADBFC /* ProgressShapeLayer.swift */; };
+		C3DD866B29462A7000BADBFC /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD866A29462A7000BADBFC /* StrokeAnimation.swift */; };
+		C3DD866D29462C5200BADBFC /* RotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD866C29462C5200BADBFC /* RotationAnimation.swift */; };
+		C3DD866F29462D1300BADBFC /* StrokeColorAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD866E29462D1300BADBFC /* StrokeColorAnimation.swift */; };
+		C3DD867229462DB300BADBFC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DD867129462DB300BADBFC /* BaseViewController.swift */; };
+		C3DEE3082915A2DE00D84794 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE3062915A2DE00D84794 /* ProfileViewController.swift */; };
+		C3DEE3092915A2DE00D84794 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DEE3072915A2DE00D84794 /* ProfileViewController.xib */; };
+		C3DEE30B2915A2F100D84794 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30A2915A2F100D84794 /* ProfileViewModel.swift */; };
+		C3DEE30D2915A30100D84794 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30C2915A30100D84794 /* ProfileModel.swift */; };
+		C3DEE3102915AB2C00D84794 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */; };
+		C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE3112915AB3200D84794 /* ProfileService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +111,18 @@
 		C3B402D028E0EE93000A56C9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		C3B402D328E0F9E0000A56C9 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		C3B402D428E0F9E0000A56C9 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		C3DD8666294628B700BADBFC /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C3DD86682946292400BADBFC /* ProgressShapeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressShapeLayer.swift; sourceTree = "<group>"; };
+		C3DD866A29462A7000BADBFC /* StrokeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeAnimation.swift; sourceTree = "<group>"; };
+		C3DD866C29462C5200BADBFC /* RotationAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationAnimation.swift; sourceTree = "<group>"; };
+		C3DD866E29462D1300BADBFC /* StrokeColorAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeColorAnimation.swift; sourceTree = "<group>"; };
+		C3DD867129462DB300BADBFC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C3DEE3062915A2DE00D84794 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C3DEE3072915A2DE00D84794 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		C3DEE30A2915A2F100D84794 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		C3DEE30C2915A30100D84794 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
+		C3DEE3112915AB3200D84794 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +276,7 @@
 		C39CE3C928DE487F00E9F2D9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				C3DEE3022915A2BF00D84794 /* Profile */,
 				C3B402C628E0EE53000A56C9 /* Home */,
 				C362A64228DE6AD700889CF7 /* Welcome */,
 				C39CE3CD28DE48FD00E9F2D9 /* Login */,
@@ -351,6 +376,8 @@
 		C3B402C228E0A0BD000A56C9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C3DD867029462DAB00BADBFC /* Base */,
+				C3DD8665294628A400BADBFC /* Progress */,
 				C3031BD228E13B6B00034765 /* Extensions */,
 				C39CE3E228DE53FA00E9F2D9 /* NBTextField */,
 			);
@@ -410,6 +437,71 @@
 				C3B402D428E0F9E0000A56C9 /* TransactionTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C3DD8665294628A400BADBFC /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				C3DD8666294628B700BADBFC /* ProgressView.swift */,
+				C3DD86682946292400BADBFC /* ProgressShapeLayer.swift */,
+				C3DD866A29462A7000BADBFC /* StrokeAnimation.swift */,
+				C3DD866C29462C5200BADBFC /* RotationAnimation.swift */,
+				C3DD866E29462D1300BADBFC /* StrokeColorAnimation.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		C3DD867029462DAB00BADBFC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3DD867129462DB300BADBFC /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C3DEE3022915A2BF00D84794 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C3DEE30E2915AB2400D84794 /* Service */,
+				C3DEE3052915A2CA00D84794 /* ViewModel */,
+				C3DEE3042915A2C700D84794 /* Model */,
+				C3DEE3032915A2C400D84794 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C3DEE3032915A2C400D84794 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C3DEE3062915A2DE00D84794 /* ProfileViewController.swift */,
+				C3DEE3072915A2DE00D84794 /* ProfileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C3DEE3042915A2C700D84794 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3DEE30C2915A30100D84794 /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C3DEE3052915A2CA00D84794 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C3DEE30A2915A2F100D84794 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C3DEE30E2915AB2400D84794 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */,
+				C3DEE3112915AB3200D84794 /* ProfileService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +620,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DEE3092915A2DE00D84794 /* ProfileViewController.xib in Resources */,
 				C39CE3A628DE483A00E9F2D9 /* LaunchScreen.storyboard in Resources */,
 				C362A64928DE6AF200889CF7 /* WelcomeViewController.xib in Resources */,
 				C3B402CC28E0EE6E000A56C9 /* HomeViewController.xib in Resources */,
@@ -560,27 +653,38 @@
 			files = (
 				C39CE3DC28DE4BB200E9F2D9 /* LoginModel.swift in Sources */,
 				C3B402D528E0F9E0000A56C9 /* TransactionTableViewCell.swift in Sources */,
+				C3DD866D29462C5200BADBFC /* RotationAnimation.swift in Sources */,
 				C3031BDE28E13E9300034765 /* TransactionsModel.swift in Sources */,
 				C362A64828DE6AF200889CF7 /* WelcomeViewController.swift in Sources */,
 				C3B402C528E0A0D6000A56C9 /* Keychain.swift in Sources */,
+				C3DD8667294628B700BADBFC /* ProgressView.swift in Sources */,
+				C3DD867229462DB300BADBFC /* BaseViewController.swift in Sources */,
 				C3031BDC28E13D8400034765 /* BalanceModel.swift in Sources */,
+				C3DEE3082915A2DE00D84794 /* ProfileViewController.swift in Sources */,
 				C39CE3D528DE492200E9F2D9 /* LoginViewModel.swift in Sources */,
 				C39CE3D228DE491900E9F2D9 /* LoginViewController.swift in Sources */,
 				C3B402CB28E0EE6E000A56C9 /* HomeViewController.swift in Sources */,
 				C3031BD928E13C9D00034765 /* HomeAPI.swift in Sources */,
+				C3DD86692946292400BADBFC /* ProgressShapeLayer.swift in Sources */,
 				C3031BD728E13C9700034765 /* HomeService.swift in Sources */,
 				C39CE39A28DE483800E9F2D9 /* AppDelegate.swift in Sources */,
+				C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */,
 				C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */,
+				C3DEE30B2915A2F100D84794 /* ProfileViewModel.swift in Sources */,
 				C362A64B28DE6AFB00889CF7 /* WelcomeViewModel.swift in Sources */,
+				C3DD866F29462D1300BADBFC /* StrokeColorAnimation.swift in Sources */,
 				C39CE3E428DE540F00E9F2D9 /* NBTextField.swift in Sources */,
 				C362A64128DE681F00889CF7 /* LoginCoordinator.swift in Sources */,
 				C3031BD428E13B7800034765 /* UIView+Extensions.swift in Sources */,
 				C39CE39C28DE483800E9F2D9 /* SceneDelegate.swift in Sources */,
+				C3DD866B29462A7000BADBFC /* StrokeAnimation.swift in Sources */,
 				C39CE3E028DE4BC900E9F2D9 /* LoginService.swift in Sources */,
+				C3DEE30D2915A30100D84794 /* ProfileModel.swift in Sources */,
 				C3B402D128E0EE93000A56C9 /* HomeCoordinator.swift in Sources */,
 				C3B402CE28E0EE7A000A56C9 /* HomeViewModel.swift in Sources */,
 				C362A64D28DE6B0400889CF7 /* WelcomeCoordinator.swift in Sources */,
 				C3031BE028E140B200034765 /* HomeModel.swift in Sources */,
+				C3DEE3102915AB2C00D84794 /* ProfileAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -928,8 +1032,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vafreitas/VFNetwork";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = beta/1.4.3;
+				kind = branch;
 			};
 		};
 		C39CFA8B28E20638008E17DC /* XCRemoteSwiftPackageReference "SkeletonView" */ = {

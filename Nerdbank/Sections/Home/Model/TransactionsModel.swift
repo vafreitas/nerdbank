@@ -17,21 +17,33 @@ struct TransactionsModel: VCodable {
 }
 
 struct TransactionModel: VCodable {
+    var sections: [Section]?
+}
+
+struct Section: VCodable {
+    var title: String
+    var transactions: [Transaction]?
+}
+
+struct Transaction: VCodable {
+    var senderName: String
     var transactionDate: String
-    var senderId: String
-    var value: Double
     var recipientName: String
     var transactionType: String
-    var recipientId: String
-    var senderName: String
+    var formattedValue: String
+    var movementType: String
+    var formattedDate: String
+    var value: Double
+    var icon: String
     
     enum CodingKeys: String, CodingKey {
+        case formattedDate = "formatted_date"
+        case formattedValue = "formatted_value"
         case transactionDate = "transaction_date"
-        case senderId = "sender_id"
-        case value
+        case movementType = "movement_type"
+        case value, icon
         case recipientName = "recipient_name"
         case transactionType = "transaction_type"
-        case recipientId = "recipient_id"
         case senderName = "sender_name"
     }
 }

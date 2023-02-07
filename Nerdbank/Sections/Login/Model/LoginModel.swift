@@ -28,3 +28,12 @@ struct UserResponse: VCodable {
     var fullName: String
     var isAdmin: Bool
 }
+
+struct UserRefreshTokenRequest: VCodable {
+    var refreshToken: String
+}
+
+struct UserRefreshTokenResponse: VCodable {
+    var refreshToken: String
+    var accessToken: String
+}

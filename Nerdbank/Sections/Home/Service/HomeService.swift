@@ -12,7 +12,7 @@ class HomeService: RequestService<HomeAPI> {
         execute(.balance, responseType: BalanceModel.self, completion: completion)
     }
     
-    func fetchTransactions(_ completion: @escaping (Result<TransactionsModel, Error>) -> Void) {
-        execute(.transactions, responseType: TransactionsModel.self, completion: completion)
+    func fetchTransactions(_ completion: @escaping (Result<TransactionModel, Error>) -> Void) {
+        execute(.transactions, responseType: TransactionModel.self, completion: completion)
     }
 }

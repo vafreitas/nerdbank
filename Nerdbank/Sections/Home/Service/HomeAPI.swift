@@ -30,7 +30,7 @@ extension HomeAPI: APIBuilder {
     }
     
     var headers: HTTPHeader {
-        .header("Authorization", "Bearer " + (Keychain.shared.get("user", LoginResponseModel.self)?.accessToken ?? ""))
+        .bearer(Keychain.shared.get("user", LoginResponseModel.self)?.accessToken ?? "")
     }
     
     var task: HTTPTask {

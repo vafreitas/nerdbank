@@ -9,24 +9,32 @@ import VFNetwork
 
 enum LoginAPI {
     case auth(LoginRequestModel)
+    case refreshToken(UserRefreshTokenRequest)
 }
 
 extension LoginAPI: APIBuilder {
-    var path: VFNetwork.URLPath {
-        .plain("auth/login")
+    var path: URLPath {
+        switch self {
+        case .auth:
+            return .plain("auth/login")
+        case .refreshToken:
+            return .plain("auth/accessToken")
+        }
     }
     
-    var httpMethod: VFNetwork.HTTPMethods {
+    var httpMethod: HTTPMethods {
         .post
     }
     
-    var headers: VFNetwork.HTTPHeader {
+    var headers: HTTPHeader {
         .empty
     }
     
-    var task: VFNetwork.HTTPTask {
+    var task: HTTPTask {
         switch self {
         case let .auth(model):
+            return .requestEncoder(model)
+        case let .refreshToken(model):
             return .requestEncoder(model)
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import XCoordinator
 
 protocol HomeViewModelViewDelegate: AnyObject {
     func HomeViewModelBalanceSuccess(_ viewModel: HomeViewModel)
@@ -20,14 +21,16 @@ class HomeViewModel {
     
     var model: HomeModel
     let service: HomeService
+    let router: WeakRouter<HomeRoute>?
     
     weak var delegate: HomeViewModelViewDelegate?
     
     // MARK: Initializer
     
-    init(model: HomeModel = .init(), service: HomeService = .init()) {
+    init(model: HomeModel = .init(), service: HomeService = .init(), router: WeakRouter<HomeRoute>? = nil) {
         self.model = model
         self.service = service
+        self.router = router
     }
     
     func fetchBalance() {
@@ -46,11 +49,17 @@ class HomeViewModel {
         service.fetchTransactions { result in
             switch result {
             case let .success(response):
-                self.model.transactions = response
+                self.model.extract = response
                 self.delegate?.HomeViewModelTransactionsSuccess(self)
             case let .failure(error):
                 self.delegate?.HomeViewModelTransactionsFailure(self, error: error)
             }
         }
+    }
+    
+    // MARK: Route Functions
+    
+    func openProfile() {
+        router?.trigger(.profile)
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 import KeychainSwift
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     // MARK: Outlets
     
@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.viewModel.delegate = self
     }
     
@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: Any) {
         let model = LoginRequestModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        isLoading = true
         viewModel.authenticate(model)
     }
     
@@ -55,10 +56,11 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginViewModelViewDelegate {
     func loginViewModelSuccess(_ viewModel: LoginViewModel) {
+        isLoading = false
         viewModel.goToHome()
     }
     
     func loginViewModelFailure(_ viewModel: LoginViewModel) {
-        
+        isLoading = false
     }
 }

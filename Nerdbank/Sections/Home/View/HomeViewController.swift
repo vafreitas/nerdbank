@@ -8,7 +8,7 @@
 import UIKit
 import SkeletonView
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     // MARK: Outlets
     
@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.viewModel.delegate = self
     }
     
@@ -43,6 +43,11 @@ class HomeViewController: UIViewController {
         setupHeaderView()
         setupData()
         fetch()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationIsHidden = true
     }
     
     func setupHeaderView() {
@@ -63,15 +68,19 @@ class HomeViewController: UIViewController {
     
     func fetch() {
         dispatchGroup.enter()
+        balanceLabel.showAnimatedGradientSkeleton()
         viewModel.fetchBalance()
         
         dispatchGroup.enter()
-        balanceLabel.showAnimatedGradientSkeleton()
         viewModel.fetchTransactions()
         
         dispatchGroup.notify(queue: .main) {
             print("Services Finished")
         }
+    }
+    
+    @IBAction func openProfile(_ sender: Any) {
+        viewModel.openProfile()
     }
 }
 
@@ -80,7 +89,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell", for: indexPath) as? TransactionTableViewCell,
-              let transaction = viewModel.model.transactions?.transactions[indexPath.row] else {
+              let transaction = viewModel.model.extract?.sections?[indexPath.section].transactions?[indexPath.row] else {
             return UITableViewCell()
         }
         
@@ -88,8 +97,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel.model.extract?.sections?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.model.transactions?.transactions.count ?? 0
+        viewModel.model.extract?.sections?[section].transactions?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.model.extract?.sections?[section].title ?? "N/A"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        32.0
     }
 }
 

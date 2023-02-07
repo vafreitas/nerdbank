@@ -28,23 +28,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-2T-Tdx">
                     <rect key="frame" x="0.0" y="0.0" width="390" height="284"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZC9-YR-Yi1">
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZC9-YR-Yi1">
                             <rect key="frame" x="16" y="60" width="358" height="105"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Q6-9L-Td7">
-                                    <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="318" height="105"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, USERNAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGF-WE-AYb">
-                                            <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="31.333333333333332"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="31.333333333333332"/>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hH2-3n-Nzp">
-                                            <rect key="frame" x="0.0" y="51.333333333333329" width="199.66666666666666" height="53.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="51.333333333333329" width="318" height="53.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 1000,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0b-p1-EUX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="199.66666666666666" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="318" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="MKf-F6-D4K"/>
                                                     </constraints>
@@ -60,7 +60,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo disponível" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-Bg-bH0">
-                                                    <rect key="frame" x="0.0" y="38.000000000000014" width="199.66666666666666" height="15.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="38.000000000000014" width="318" height="15.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" red="0.67450980392156867" green="0.7343870401" blue="0.85495269299999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -70,9 +70,10 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ3-yC-h5J">
-                                    <rect key="frame" x="318" y="0.0" width="40" height="33.333333333333336"/>
+                                    <rect key="frame" x="318" y="0.0" width="40" height="34"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="40" id="tz5-mk-RkR"/>
+                                        <constraint firstAttribute="height" constant="34" id="1WO-h5-S9d"/>
+                                        <constraint firstAttribute="width" constant="40" id="20l-oH-nFW"/>
                                     </constraints>
                                     <color key="tintColor" white="0.75390625" alpha="1" colorSpace="calibratedWhite"/>
                                     <buttonConfiguration key="configuration" style="plain">
@@ -81,6 +82,9 @@
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
                                         </preferredSymbolConfiguration>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="openProfile:" destination="-1" eventType="touchUpInside" id="IgJ-iU-kgb"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

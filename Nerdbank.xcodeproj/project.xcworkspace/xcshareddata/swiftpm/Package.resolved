@@ -32,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vafreitas/VFNetwork",
       "state" : {
-        "revision" : "e7ef0ef875913c125fc0ad26e0fe3790ab741bab",
-        "version" : "1.4.2"
+        "branch" : "beta/1.4.3",
+        "revision" : "d8a1b5910ca2fc04822f6cbf27e2afdfdded7ac0"
       }
     },
     {
