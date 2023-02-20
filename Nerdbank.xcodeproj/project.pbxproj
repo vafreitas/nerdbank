@@ -29,7 +29,6 @@
 		C39CE3D228DE491900E9F2D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3D028DE491900E9F2D9 /* LoginViewController.swift */; };
 		C39CE3D328DE491900E9F2D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39CE3D128DE491900E9F2D9 /* LoginViewController.xib */; };
 		C39CE3D528DE492200E9F2D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3D428DE492200E9F2D9 /* LoginViewModel.swift */; };
-		C39CE3D828DE4B5700E9F2D9 /* VFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = C39CE3D728DE4B5700E9F2D9 /* VFNetwork */; };
 		C39CE3DC28DE4BB200E9F2D9 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3DB28DE4BB200E9F2D9 /* LoginModel.swift */; };
 		C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3DD28DE4BC300E9F2D9 /* LoginAPI.swift */; };
 		C39CE3E028DE4BC900E9F2D9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3DF28DE4BC900E9F2D9 /* LoginService.swift */; };
@@ -55,6 +54,7 @@
 		C3DEE30D2915A30100D84794 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30C2915A30100D84794 /* ProfileModel.swift */; };
 		C3DEE3102915AB2C00D84794 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */; };
 		C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE3112915AB3200D84794 /* ProfileService.swift */; };
+		F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = F6BF4C01299728EE00B5A834 /* VFNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,7 +133,7 @@
 				C39CFA8D28E20638008E17DC /* SkeletonView in Frameworks */,
 				C3DA970928DFEE7800234FA3 /* KeychainSwift in Frameworks */,
 				C362A63E28DE66DB00889CF7 /* XCoordinator in Frameworks */,
-				C39CE3D828DE4B5700E9F2D9 /* VFNetwork in Frameworks */,
+				F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,10 +521,10 @@
 			);
 			name = Nerdbank;
 			packageProductDependencies = (
-				C39CE3D728DE4B5700E9F2D9 /* VFNetwork */,
 				C362A63D28DE66DB00889CF7 /* XCoordinator */,
 				C3DA970828DFEE7800234FA3 /* KeychainSwift */,
 				C39CFA8C28E20638008E17DC /* SkeletonView */,
+				F6BF4C01299728EE00B5A834 /* VFNetwork */,
 			);
 			productName = Nerdbank;
 			productReference = C39CE39628DE483800E9F2D9 /* Nerdbank.app */;
@@ -599,10 +599,10 @@
 			);
 			mainGroup = C39CE38D28DE483800E9F2D9;
 			packageReferences = (
-				C39CE3D628DE4B5700E9F2D9 /* XCRemoteSwiftPackageReference "VFNetwork" */,
 				C362A63C28DE66DB00889CF7 /* XCRemoteSwiftPackageReference "XCoordinator" */,
 				C3DA970728DFEE7800234FA3 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				C39CFA8B28E20638008E17DC /* XCRemoteSwiftPackageReference "SkeletonView" */,
+				F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */,
 			);
 			productRefGroup = C39CE39728DE483800E9F2D9 /* Products */;
 			projectDirPath = "";
@@ -1028,14 +1028,6 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		C39CE3D628DE4B5700E9F2D9 /* XCRemoteSwiftPackageReference "VFNetwork" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vafreitas/VFNetwork";
-			requirement = {
-				branch = beta/1.4.3;
-				kind = branch;
-			};
-		};
 		C39CFA8B28E20638008E17DC /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Juanpe/SkeletonView";
@@ -1052,6 +1044,14 @@
 				version = 20.0.0;
 			};
 		};
+		F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vafreitas/VFNetwork";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1059,11 +1059,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C362A63C28DE66DB00889CF7 /* XCRemoteSwiftPackageReference "XCoordinator" */;
 			productName = XCoordinator;
-		};
-		C39CE3D728DE4B5700E9F2D9 /* VFNetwork */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C39CE3D628DE4B5700E9F2D9 /* XCRemoteSwiftPackageReference "VFNetwork" */;
-			productName = VFNetwork;
 		};
 		C39CFA8C28E20638008E17DC /* SkeletonView */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1074,6 +1069,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3DA970728DFEE7800234FA3 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		F6BF4C01299728EE00B5A834 /* VFNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */;
+			productName = VFNetwork;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
