@@ -12,7 +12,8 @@ class LoginService: RequestService<LoginAPI> {
         execute(.auth(model), responseType: LoginResponseModel.self, completion: completion)
     }
     
-    func refreshToken(_ model: UserRefreshTokenRequest, _ completion: @escaping (Result<UserRefreshTokenResponse, Error>) -> Void) {
+    func refreshToken(_ model: UserRefreshTokenRequest,
+                      _ completion: @escaping (Result<UserRefreshTokenResponse, Error>) -> Void) {
         execute(.refreshToken(model), responseType: UserRefreshTokenResponse.self, completion: completion)
     }
 }

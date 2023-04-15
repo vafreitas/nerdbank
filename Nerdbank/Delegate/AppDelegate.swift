@@ -10,6 +10,9 @@ import VFNetwork
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let router = WelcomeCoordinator().strongRouter
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         VFNetwork.shared.configure([
             .timeout(30.0)
@@ -42,15 +45,17 @@ extension AppDelegate: VFNetworkObserver {
             let user = Keychain.shared.get("user", LoginResponseModel.self)
             let refreshToken = UserRefreshTokenRequest(refreshToken: user?.refreshToken ?? "NA")
             LoginService().refreshToken(refreshToken) { result in
-                switch result {
-                case let .success(response):
-                    if var user = Keychain.shared.get("user", LoginResponseModel.self) {
-                        user.refreshToken = response.refreshToken
-                        user.accessToken = response.accessToken
-                        Keychain.shared.set("user", user)
+                DispatchQueue.main.async {
+                    switch result {
+                    case let .success(response):
+                        if var user = Keychain.shared.get("user", LoginResponseModel.self) {
+                            user.refreshToken = response.refreshToken
+                            user.accessToken = response.accessToken
+                            Keychain.shared.set("user", user)
+                        }
+                    case .failure:
+                        self.router.trigger(.root)
                     }
-                case let .failure(error):
-                    debugPrint(error)
                 }
             }
         }

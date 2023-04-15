@@ -20,12 +20,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sX5-kw-qfq">
-                    <rect key="frame" x="24" y="668" width="366" height="140"/>
+                    <rect key="frame" x="24" y="684" width="366" height="124"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-IT-Goz">
-                            <rect key="frame" x="0.0" y="0.0" width="366" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="366" height="52"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="M4c-Ch-Tal"/>
+                                <constraint firstAttribute="height" constant="52" id="M4c-Ch-Tal"/>
                             </constraints>
                             <color key="tintColor" red="0.078431372549019607" green="0.61960784313725492" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <state key="normal" title="Button"/>
@@ -40,9 +40,9 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MA6-18-J23">
-                            <rect key="frame" x="0.0" y="80" width="366" height="60"/>
+                            <rect key="frame" x="0.0" y="72" width="366" height="52"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="P7M-13-keG"/>
+                                <constraint firstAttribute="height" constant="52" id="P7M-13-keG"/>
                             </constraints>
                             <color key="tintColor" red="0.050980392156862744" green="0.34901960784313724" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <state key="normal" title="Button"/>
@@ -82,13 +82,13 @@
                     </subviews>
                 </stackView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="welcome_ilust" translatesAutoresizingMaskIntoConstraints="NO" id="QuP-bw-Qcr">
-                    <rect key="frame" x="-31" y="239.5" width="476" height="348.5"/>
+                    <rect key="frame" x="-42" y="239.5" width="498" height="364.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" secondItem="QuP-bw-Qcr" secondAttribute="height" multiplier="138:101" priority="750" id="WJ6-6H-JnA"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nerdbank all rights reserved 2023" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLl-MK-Uip">
-                    <rect key="frame" x="24" y="830" width="366" height="16"/>
+                    <rect key="frame" x="24" y="834" width="366" height="16"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="16" id="lEP-mx-3RX"/>
                     </constraints>
@@ -100,7 +100,7 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uLl-MK-Uip" secondAttribute="bottom" constant="16" id="4R3-9j-fLZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uLl-MK-Uip" secondAttribute="bottom" constant="12" id="4R3-9j-fLZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qtq-Ok-R5m" secondAttribute="trailing" constant="24" id="5oX-WG-0ub"/>
                 <constraint firstItem="sX5-kw-qfq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="5zP-Zn-nBB"/>
                 <constraint firstItem="uLl-MK-Uip" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="PrD-WD-k7v"/>
@@ -110,7 +110,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sX5-kw-qfq" secondAttribute="trailing" constant="24" id="c90-tZ-LHJ"/>
                 <constraint firstItem="QuP-bw-Qcr" firstAttribute="top" secondItem="qtq-Ok-R5m" secondAttribute="bottom" constant="70.5" id="mUH-iF-hPh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uLl-MK-Uip" secondAttribute="trailing" constant="24" id="swA-H6-3cT"/>
-                <constraint firstItem="uLl-MK-Uip" firstAttribute="top" secondItem="MA6-18-J23" secondAttribute="bottom" constant="22" id="uqs-4J-KSW"/>
+                <constraint firstItem="uLl-MK-Uip" firstAttribute="top" secondItem="MA6-18-J23" secondAttribute="bottom" constant="26" id="uqs-4J-KSW"/>
                 <constraint firstItem="qtq-Ok-R5m" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="z03-SG-cSK"/>
             </constraints>
             <point key="canvasLocation" x="-166.15384615384616" y="-38.388625592417057"/>

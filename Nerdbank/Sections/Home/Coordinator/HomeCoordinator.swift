@@ -6,15 +6,21 @@
 //
 
 import XCoordinator
+import UIKit
 
 enum HomeRoute: Route {
     case home
     case profile
+    case logout
 }
 
 class HomeCoordinator: NavigationCoordinator<HomeRoute> {
-    init() {
-        super.init(initialRoute: .home)
+    init(rootViewController: UINavigationController? = nil) {
+        if let rootViewController = rootViewController {
+            super.init(rootViewController: rootViewController, initialRoute: .home)
+        } else {
+            super.init(initialRoute: .home)
+        }
     }
     
     override func prepareTransition(for route: HomeRoute) -> NavigationTransition {
@@ -27,6 +33,12 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
             let viewModel = ProfileViewModel()
             let viewController = ProfileViewController(viewModel: viewModel)
             return .push(viewController)
+        case .logout:
+            if let window = UIApplication.shared.windows.first {
+                window.rootViewController = WelcomeCoordinator().rootViewController
+                window.makeKeyAndVisible()
+            }
+            return .none()
         }
     }
 }

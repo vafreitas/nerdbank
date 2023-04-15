@@ -54,6 +54,10 @@
 		C3DEE30D2915A30100D84794 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30C2915A30100D84794 /* ProfileModel.swift */; };
 		C3DEE3102915AB2C00D84794 /* ProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */; };
 		C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DEE3112915AB3200D84794 /* ProfileService.swift */; };
+		F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */; };
+		F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */; };
+		F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */; };
+		F6BCC70529EB1FF6006B35C5 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70429EB1FF6006B35C5 /* ProfileCoordinator.swift */; };
 		F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = F6BF4C01299728EE00B5A834 /* VFNetwork */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,10 @@
 		C3DEE30C2915A30100D84794 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		C3DEE30F2915AB2C00D84794 /* ProfileAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAPI.swift; sourceTree = "<group>"; };
 		C3DEE3112915AB3200D84794 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
+		F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
+		F6BCC70429EB1FF6006B35C5 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C3031BD328E13B7800034765 /* UIView+Extensions.swift */,
+				F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 		C39CE3C928DE487F00E9F2D9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F6BCC6FD29EB19A1006B35C5 /* Tab */,
 				C3DEE3022915A2BF00D84794 /* Profile */,
 				C3B402C628E0EE53000A56C9 /* Home */,
 				C362A64228DE6AD700889CF7 /* Welcome */,
@@ -359,6 +369,7 @@
 		C39CE3E128DE53DB00E9F2D9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F6BCC70129EB1CCF006B35C5 /* Extensions */,
 				C3B402C328E0A0C6000A56C9 /* Keychain */,
 				C3B402C228E0A0BD000A56C9 /* UI */,
 			);
@@ -462,6 +473,7 @@
 		C3DEE3022915A2BF00D84794 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				F6BCC70629EB28EB006B35C5 /* Coordinator */,
 				C3DEE30E2915AB2400D84794 /* Service */,
 				C3DEE3052915A2CA00D84794 /* ViewModel */,
 				C3DEE3042915A2C700D84794 /* Model */,
@@ -502,6 +514,38 @@
 				C3DEE3112915AB3200D84794 /* ProfileService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F6BCC6FD29EB19A1006B35C5 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				F6BCC6FE29EB19A5006B35C5 /* Coordinator */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		F6BCC6FE29EB19A5006B35C5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F6BCC70129EB1CCF006B35C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F6BCC70629EB28EB006B35C5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F6BCC70429EB1FF6006B35C5 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -661,9 +705,13 @@
 				C3DD867229462DB300BADBFC /* BaseViewController.swift in Sources */,
 				C3031BDC28E13D8400034765 /* BalanceModel.swift in Sources */,
 				C3DEE3082915A2DE00D84794 /* ProfileViewController.swift in Sources */,
+				F6BCC70529EB1FF6006B35C5 /* ProfileCoordinator.swift in Sources */,
 				C39CE3D528DE492200E9F2D9 /* LoginViewModel.swift in Sources */,
+				F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */,
+				F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */,
 				C39CE3D228DE491900E9F2D9 /* LoginViewController.swift in Sources */,
 				C3B402CB28E0EE6E000A56C9 /* HomeViewController.swift in Sources */,
+				F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */,
 				C3031BD928E13C9D00034765 /* HomeAPI.swift in Sources */,
 				C3DD86692946292400BADBFC /* ProgressShapeLayer.swift in Sources */,
 				C3031BD728E13C9700034765 /* HomeService.swift in Sources */,
@@ -858,6 +906,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -888,6 +937,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

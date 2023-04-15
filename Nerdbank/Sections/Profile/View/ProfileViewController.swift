@@ -36,7 +36,6 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Perfil"
-        navigationIsHidden = false
         fetch()
     }
     

@@ -19,23 +19,22 @@ class WelcomeCoordinator: NavigationCoordinator<WelcomeRoute> {
     let user = Keychain.shared.get("user", LoginResponseModel.self)
     
     init() {
-//        if user != nil {
-//            super.init(initialRoute: .home)
-//        } else {
+        if user != nil {
+            super.init(initialRoute: .home)
+        } else {
             super.init(initialRoute: .root)
-//        }
+        }
     }
     
     override func prepareTransition(for route: WelcomeRoute) -> NavigationTransition {
         switch route {
         case .root:
-            let viewModel = WelcomeViewModel(router: unownedRouter)
+            let viewModel = WelcomeViewModel(router: strongRouter)
             let viewController = WelcomeViewController(viewModel: viewModel)
-            return .push(viewController)
-        case .home:
-            let viewModel = HomeViewModel()
-            let viewController = HomeViewController(viewModel: viewModel)
             return .set([viewController])
+        case .home:
+            let coordinator = HomeTabBarCoordinator()
+            return .presentFullScreen(coordinator)
         case .login:
             let loginCoord = LoginCoordinator(rootViewController: self.rootViewController)
             addChild(loginCoord)

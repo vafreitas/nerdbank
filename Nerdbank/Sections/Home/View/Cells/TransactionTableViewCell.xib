@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,46 +19,51 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ndk-kn-58S">
-                        <rect key="frame" x="16" y="16" width="288" height="46"/>
+                        <rect key="frame" x="32.666666666666657" y="16" width="271.33333333333337" height="46"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kql-Qg-ZfO">
-                                <rect key="frame" x="0.0" y="1" width="44" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="HXX-bs-Som"/>
-                                    <constraint firstAttribute="width" constant="44" id="rUo-Bq-tcx"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qQZ-hO-s8H">
-                                <rect key="frame" x="56" y="3" width="120" height="40.333333333333336"/>
+                                <rect key="frame" x="0.0" y="3" width="159.33333333333334" height="40.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-J6-p60">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="19.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159.33333333333334" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <color key="textColor" red="0.070588238540000001" green="0.19215688110000001" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.10588235294117647" green="0.2196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amanda Malaman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a77-8k-UG9">
-                                        <rect key="frame" x="0.0" y="23.333333333333336" width="120" height="17"/>
+                                        <rect key="frame" x="0.0" y="23.333333333333336" width="159.33333333333334" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <color key="textColor" red="0.34160554415451272" green="0.37394926611662199" blue="0.40574752742593934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.37254901960784315" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-Og-7RY">
-                                <rect key="frame" x="188" y="3" width="100" height="40.333333333333336"/>
+                                <rect key="frame" x="171.33333333333334" y="3" width="100.00000000000003" height="40.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- R$ 50.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R36-67-DBo">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <color key="textColor" red="0.070588238540000001" green="0.19215688110000001" blue="0.37647059560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.078431372550000003" green="0.61960784310000006" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15/08" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVO-64-kzl">
                                         <rect key="frame" x="0.0" y="23.333333333333336" width="100" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                         <color key="textColor" red="0.33314774315807688" green="0.35600170101686374" blue="0.37415984336464669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                                 <constraints>
@@ -66,18 +72,33 @@
                             </stackView>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDv-JL-4Wx">
+                        <rect key="frame" x="15.999999999999998" y="25" width="0.66666666666666607" height="45"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.67000000000000004" id="o6b-Lj-psn"/>
+                            <constraint firstAttribute="height" constant="45" id="wjc-Wd-T66"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ndk-kn-58S" secondAttribute="trailing" constant="16" id="Crl-6P-iRO"/>
+                    <constraint firstItem="TDv-JL-4Wx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HZv-6h-4cJ"/>
                     <constraint firstItem="ndk-kn-58S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="I03-nk-fLd"/>
-                    <constraint firstItem="ndk-kn-58S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hJa-8f-mv9"/>
+                    <constraint firstAttribute="bottom" secondItem="TDv-JL-4Wx" secondAttribute="bottom" constant="8" id="RGx-ae-xUl"/>
+                    <constraint firstItem="ndk-kn-58S" firstAttribute="leading" secondItem="TDv-JL-4Wx" secondAttribute="trailing" constant="16" id="SQA-AR-jbf"/>
                     <constraint firstAttribute="bottom" secondItem="ndk-kn-58S" secondAttribute="bottom" constant="16" id="iUU-iC-jEH"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="dateLabel" destination="BVO-64-kzl" id="Sx5-l1-Ttc"/>
-                <outlet property="iconImageView" destination="Kql-Qg-ZfO" id="OKe-uG-har"/>
                 <outlet property="recipientNameLabel" destination="a77-8k-UG9" id="hhN-wk-pld"/>
                 <outlet property="transactionTypeLabel" destination="ZuT-J6-p60" id="ZHj-8M-RdY"/>
                 <outlet property="valueLabel" destination="R36-67-DBo" id="zfh-Ff-EIC"/>
@@ -85,4 +106,9 @@
             <point key="canvasLocation" x="130.76923076923077" y="0.7109004739336493"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

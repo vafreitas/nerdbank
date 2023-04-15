@@ -80,7 +80,17 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func openProfile(_ sender: Any) {
-        viewModel.openProfile()
+        let bottomSheet = UIAlertController(title: "Options", message: "Choose", preferredStyle: .actionSheet)
+        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
+            Keychain.shared.clear()
+            self.viewModel.logout()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        bottomSheet.addAction(logoutAction)
+        bottomSheet.addAction(cancelAction)
+        navigationController?.present(bottomSheet, animated: true)
     }
 }
 
@@ -88,21 +98,24 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell", for: indexPath) as? TransactionTableViewCell,
-              let transaction = viewModel.model.extract?.sections?[indexPath.section].transactions?[indexPath.row] else {
-            return UITableViewCell()
-        }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionTableViewCell", for: indexPath) as? TransactionTableViewCell else { return UITableViewCell() }
         
-        cell.setup(transaction)
-        return cell
+        if let transaction = viewModel.model.extract?.sections?[indexPath.section].transactions?[indexPath.row] {
+            cell.hideSkeleton()
+            cell.setup(transaction)
+            return cell
+        } else {
+            cell.showSkeleton()
+            return cell
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.model.extract?.sections?.count ?? 0
+        viewModel.model.extract?.sections?.count ?? 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.model.extract?.sections?[section].transactions?.count ?? 0
+        viewModel.model.extract?.sections?[section].transactions?.count ?? 3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

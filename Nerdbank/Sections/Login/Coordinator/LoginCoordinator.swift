@@ -27,9 +27,8 @@ class LoginCoordinator: NavigationCoordinator<LoginRoute> {
             let viewController = LoginViewController(viewModel: viewModel)
             return .push(viewController)
         case .home:
-            let coordinator = HomeCoordinator()
-            coordinator.viewController.modalPresentationStyle = .fullScreen
-            return .show(coordinator)
+            let coordinator = HomeTabBarCoordinator()
+            return .presentFullScreen(coordinator)
         case .signIn:
             return .push(UIViewController())
         case .forget:

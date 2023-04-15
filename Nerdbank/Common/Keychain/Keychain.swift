@@ -37,4 +37,9 @@ class Keychain {
             debugPrint("Error to save object in keychain")
         }
     }
+    
+    @discardableResult
+    func clear() -> Bool {
+        keychain.clear()
+    }
 }

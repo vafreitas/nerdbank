@@ -8,9 +8,9 @@
 import XCoordinator
 
 class WelcomeViewModel {
-    let router: UnownedRouter<WelcomeRoute>
+    let router: StrongRouter<WelcomeRoute>
     
-    init(router: UnownedRouter<WelcomeRoute>) {
+    init(router: StrongRouter<WelcomeRoute>) {
         self.router = router
     }
     
