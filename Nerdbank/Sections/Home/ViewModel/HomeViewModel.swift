@@ -31,6 +31,14 @@ class HomeViewModel {
         self.model = model
         self.service = service
         self.router = router
+        
+        self.model.menuOptions = [
+            .init(image: .init(named: "transfer_menu_ico"), title: "Transferir", type: .transfer),
+            .init(image: .init(named: "cash_menu_ico"), title: "Depositar", type: .cashin),
+            .init(image: .init(named: "currency_menu_ico"), title: "Pagar", type: .payment),
+            .init(image: .init(named: "currency_menu_ico"), title: "Pagar", type: .payment)
+            
+        ]
     }
     
     func fetchBalance() {

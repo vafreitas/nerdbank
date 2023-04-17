@@ -6,8 +6,22 @@
 //
 
 import Foundation
+import UIKit
 
 struct HomeModel {
     var balance: BalanceModel?
     var extract: TransactionModel?
+    var menuOptions: [HomeMenuModel]?
+}
+
+struct HomeMenuModel {
+    var image: UIImage?
+    var title: String
+    var type: HomeMenuType
+}
+
+enum HomeMenuType {
+    case transfer
+    case payment
+    case cashin
 }

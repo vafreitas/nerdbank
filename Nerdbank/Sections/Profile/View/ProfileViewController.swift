@@ -35,11 +35,17 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Perfil"
+        setupView()
         fetch()
     }
     
+    func setupView() {
+        title = "Profile"
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     func fetch() {
+        isLoading = true
         viewModel.fetchMe()
     }
     
@@ -58,10 +64,12 @@ class ProfileViewController: BaseViewController {
 extension ProfileViewController: ProfileViewModelViewDelegate {
     func profileViewModelMeSuccess(_ viewModel: ProfileViewModel) {
         print("Success Me!")
+        isLoading = false
         setInfo()
     }
     
     func profileViewModelMeFailure(_ viewModel: ProfileViewModel, error: Error) {
+        isLoading = false
         print("Failed Me!")
     }
 }

@@ -40,6 +40,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupCollectionView()
         setupHeaderView()
         setupData()
         fetch()
@@ -59,6 +60,12 @@ class HomeViewController: BaseViewController {
         transactionsTableView.dataSource = self
         transactionsTableView.register(.init(nibName: "TransactionTableViewCell",
                                              bundle: Bundle.main), forCellReuseIdentifier: "TransactionTableViewCell")
+    }
+    
+    func setupCollectionView() {
+        shortcutCollectionView.register(.init(nibName: "HomeCollectionCell", bundle: .main), forCellWithReuseIdentifier: "HomeCollectionCell")
+        shortcutCollectionView.delegate = self
+        shortcutCollectionView.dataSource = self
     }
     
     func setupData() {
@@ -125,6 +132,55 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         32.0
     }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionCell", for: indexPath) as? HomeCollectionCell else {
+            return .init()
+        }
+        if let item = viewModel.model.menuOptions?[indexPath.row] {
+            cell.setup(item)
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        viewModel.model.menuOptions?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        .init(width: 100, height: 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let option = viewModel.model.menuOptions?[indexPath.row] else { return }
+        switch option.type {
+        case .transfer:
+            debugPrint("Transfer")
+        case .payment:
+            debugPrint("Payment")
+        case .cashin:
+            debugPrint("Cashin")
+        }
+    }
+    
+    // Center items
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        let cellWidth : CGFloat = 100
+//        let paddingInside: CGFloat = 10
+//
+//        let numberOfCells = floor(collectionView.frame.size.width / cellWidth)
+//        let edgeInsets = (collectionView.frame.size.width - (numberOfCells * cellWidth)) / 2 - paddingInside
+//        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
+//    }
 }
 
 // MARK: HomeViewModelDelegate

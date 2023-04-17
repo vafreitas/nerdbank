@@ -19,30 +19,49 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
     // MARK: Properties
     
     private let homeRouter: StrongRouter<HomeRoute>
+    private let extractRouter: StrongRouter<ExtractRoute>
     private let profileRouter: StrongRouter<ProfileRoute>
     
     // MARK: Initializer
     
     convenience init() {
         let homeCoordinator = HomeCoordinator()
-        homeCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .recents, tag: 0)
+        homeCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Home",
+                                                                     image: .init(named: "tab_home_ico"),
+                                                                     tag: 0)
+        
+        let extractCoordinator = ExtractListCoordinator()
+        extractCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Extract",
+                                                                        image: .init(named: "tab_extract_ico"),
+                                                                        tag: 1)
         
         let profileCoordinator = ProfileCoordinator()
-        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile",
+                                                                        image: .init(named: "tab_profile_ico"),
+                                                                        tag: 2)
         
-        self.init(homeRouter: homeCoordinator.strongRouter, profileRouter: profileCoordinator.strongRouter)
+        self.init(homeRouter: homeCoordinator.strongRouter,
+                  extractRouter: extractCoordinator.strongRouter,
+                  profileRouter: profileCoordinator.strongRouter)
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         
         blurView.frame = rootViewController.tabBar.bounds
         blurView.autoresizingMask = .flexibleHeight
+        blurView.roundCorners(radius: 28, corners: [.topLeft, .topRight])
+        
+        rootViewController.tabBar.tintColor = UIColor(hexString: "14955F")
+        rootViewController.tabBar.shadowImage = UIImage()
+        rootViewController.tabBar.backgroundImage = UIImage()
+        rootViewController.tabBar.clipsToBounds = true
         rootViewController.tabBar.insertSubview(blurView, at: 0)
     }
     
-    init(homeRouter: StrongRouter<HomeRoute>, profileRouter: StrongRouter<ProfileRoute>) {
+    init(homeRouter: StrongRouter<HomeRoute>, extractRouter: StrongRouter<ExtractRoute>, profileRouter: StrongRouter<ProfileRoute>) {
         self.homeRouter = homeRouter
+        self.extractRouter = extractRouter
         self.profileRouter = profileRouter
-        super.init(tabs: [homeRouter, profileRouter], select: homeRouter)
+        super.init(tabs: [homeRouter, extractRouter, profileRouter], select: homeRouter)
     }
     
     override func prepareTransition(for route: TabBarRoute) -> TabBarTransition {
@@ -50,7 +69,7 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
         case .home:
             return .select(homeRouter)
         case .extract:
-            return .none()
+            return .select(extractRouter)
         case .profile:
             return .select(profileRouter)
         }

@@ -1,11 +1,16 @@
 //
-//  TransactionsModel.swift
+//  ExtractModel.swift
 //  Nerdbank
 //
-//  Created by Victor Alves de Freitas on 25/09/22.
+//  Created by Victor Alves de Freitas on 17/04/23.
 //
 
 import VFNetwork
+import Foundation
+
+struct ExtractModel {
+    var extract: TransactionModel?
+}
 
 struct TransactionsModel: VCodable {
     var transactions: [TransactionModel]
