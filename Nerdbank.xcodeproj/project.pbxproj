@@ -64,6 +64,7 @@
 		C3E9FB7F29EDC43D00726896 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */; };
 		F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */; };
 		F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */; };
+		F6755EC429F07C4200757F02 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = F6755EC329F07C4200757F02 /* Toast */; };
 		F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */; };
 		F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */; };
 		F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */; };
@@ -161,6 +162,7 @@
 				C39CFA8D28E20638008E17DC /* SkeletonView in Frameworks */,
 				C3DA970928DFEE7800234FA3 /* KeychainSwift in Frameworks */,
 				C362A63E28DE66DB00889CF7 /* XCoordinator in Frameworks */,
+				F6755EC429F07C4200757F02 /* Toast in Frameworks */,
 				F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +673,7 @@
 				C3DA970828DFEE7800234FA3 /* KeychainSwift */,
 				C39CFA8C28E20638008E17DC /* SkeletonView */,
 				F6BF4C01299728EE00B5A834 /* VFNetwork */,
+				F6755EC329F07C4200757F02 /* Toast */,
 			);
 			productName = Nerdbank;
 			productReference = C39CE39628DE483800E9F2D9 /* Nerdbank.app */;
@@ -749,6 +752,7 @@
 				C3DA970728DFEE7800234FA3 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				C39CFA8B28E20638008E17DC /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */,
+				F6755EC229F07C4200757F02 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = C39CE39728DE483800E9F2D9 /* Products */;
 			projectDirPath = "";
@@ -1208,6 +1212,14 @@
 				version = 20.0.0;
 			};
 		};
+		F6755EC229F07C4200757F02 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vafreitas/VFNetwork";
@@ -1233,6 +1245,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3DA970728DFEE7800234FA3 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		F6755EC329F07C4200757F02 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6755EC229F07C4200757F02 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 		F6BF4C01299728EE00B5A834 /* VFNetwork */ = {
 			isa = XCSwiftPackageProductDependency;

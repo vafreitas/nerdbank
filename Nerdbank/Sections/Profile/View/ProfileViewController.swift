@@ -7,6 +7,7 @@
 
 import UIKit
 import SkeletonView
+import Toast
 
 class ProfileViewController: BaseViewController {
 
@@ -98,6 +99,45 @@ class ProfileViewController: BaseViewController {
         accountLabel.text = "\(user.bankAccount?.number ?? 0)-\(user.bankAccount?.digit ?? 0)"
         bankLabel.text = "\(user.bankAccount?.bankName ?? "NA") - \(user.bankAccount?.bankNumber ?? 0)"
     }
+    
+    @IBAction func copyToClipboard(_ sender: Any) {
+        let text =  """
+            Estes são meus dados do Nerdbank. \n
+            Conta: \(self.accountLabel.text ?? "")
+            Agência: \(self.agencyLabel.text ?? "")
+            Banco: \(self.bankLabel.text ?? "")
+            """
+        let alert = UIAlertController(title: "Dados Bancarios", message: "Oque deseja fazer?", preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "Copiar", style: .default) { _ in
+            UIPasteboard.general.string = text
+            var style = ToastStyle()
+            style.backgroundColor = UIColor(named: "profile_copy_bg") ?? .init()
+            style.titleColor = UIColor(named: "profile_username") ?? .init()
+            style.imageSize = .init(width: 24, height: 24)
+            style.titleAlignment = .center
+            ToastManager.shared.style = style
+            var image = UIImage(named: "toast_success_ico")
+            image?.withTintColor(.init(named: "profile_menu_ico") ?? .init())
+            self.view.makeToast(nil, duration: 2.0, title: "Dados Copiados!", image: image)
+        }
+        
+        let action2 = UIAlertAction(title: "Compartilhar", style: .default) { _ in
+            self.share(text: text)
+        }
+        
+        alert.addAction(action1)
+        alert.addAction(action2)
+        alert.addAction(.init(title: "Cancelar", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    func share(text: String) {
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 
 // MARK: UITableViewDelegate
@@ -121,7 +161,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         case .security:
             break
         case .logout:
-            let alert = UIAlertController(title: "Deseja mesmo sair?", message: nil, preferredStyle: .alert)
+            let alert = UIAlertController(title: "Deseja mesmo sair?", message: "Você está deslogando de sua conta", preferredStyle: .alert)
             let yes = UIAlertAction(title: "Sim", style: .default) { _ in
                 Keychain.shared.clear()
                 self.viewModel.logout()
