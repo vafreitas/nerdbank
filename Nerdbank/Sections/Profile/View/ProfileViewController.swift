@@ -228,6 +228,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             let alert = UIAlertController(title: "Deseja mesmo sair?", message: "Você está deslogando de sua conta", preferredStyle: .alert)
             let yes = UIAlertAction(title: "Sim", style: .default) { _ in
                 Keychain.shared.clear()
+                self.resetDefaults()
                 self.viewModel.logout()
             }
             
@@ -235,6 +236,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             alert.addAction(yes)
             alert.addAction(no)
             present(alert, animated: true)
+        }
+    }
+    
+    func resetDefaults() {
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
         }
     }
 }

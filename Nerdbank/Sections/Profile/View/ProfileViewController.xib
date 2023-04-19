@@ -30,9 +30,10 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="esE-Xu-szT">
                     <rect key="frame" x="16" y="57" width="358" height="60"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ujh-vw-llf">
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_default" translatesAutoresizingMaskIntoConstraints="NO" id="Ujh-vw-llf">
                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                            <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" name="profile_username"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="yqx-ki-WuX"/>
                             </constraints>
@@ -257,6 +258,7 @@
     </objects>
     <resources>
         <image name="profile_copy_ico" width="28" height="28"/>
+        <image name="profile_default" width="78" height="78"/>
         <image name="profile_qr_ico" width="28" height="28"/>
         <namedColor name="home_bg">
             <color red="0.94900000095367432" green="0.94900000095367432" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
