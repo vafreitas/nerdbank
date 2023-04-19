@@ -17,11 +17,13 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var shortcutCollectionView: UICollectionView!
     @IBOutlet weak var transactionsTableView: UITableView!
+    @IBOutlet weak var eyeButton: UIButton!
     
     // MARK: Properties
     
     let viewModel: HomeViewModel
     let dispatchGroup = DispatchGroup()
+    var balanceIsHidden: Bool = false
     
     // MARK: Initializer
     
@@ -53,6 +55,10 @@ class HomeViewController: BaseViewController {
     
     func setupHeaderView() {
         headerView.roundCorners(radius: 20, corners: [.bottomLeft, .bottomRight])
+        balanceLabel.layer.cornerRadius = 10
+        balanceLabel.layer.masksToBounds = true
+        changeVisibillity()
+        changeIcon()
     }
     
     func setupTableView() {
@@ -88,6 +94,31 @@ class HomeViewController: BaseViewController {
     
     @IBAction func openNotifications(_ sender: Any) {
        
+    }
+    
+    @IBAction func eyeTapped(_ sender: Any) {
+        changeVisibillity()
+    }
+    
+    func changeVisibillity() {
+        balanceIsHidden = UserDefaults.standard.bool(forKey: "balance-hidden")
+        if balanceIsHidden {
+            eyeButton.setImage(UIImage(named: "home_eye_open"), for: .normal)
+            balanceLabel.text = "                      "
+            balanceLabel.backgroundColor = .lightGray
+            UserDefaults.standard.set(false, forKey: "balance-hidden")
+        } else {
+            eyeButton.setImage(UIImage(named: "home_eye_close"), for: .normal)
+            balanceLabel.text = "R$ " + String(describing: viewModel.model.balance?.balanceAvailable ?? 0)
+            balanceLabel.backgroundColor = .clear
+            UserDefaults.standard.set(true, forKey: "balance-hidden")
+        }
+    }
+    
+    func changeIcon() {
+        balanceIsHidden = UserDefaults.standard.bool(forKey: "balance-hidden")
+        let image = balanceIsHidden == true ? UIImage(named: "home_eye_open") : UIImage(named: "home_eye_close")
+        eyeButton.setImage(image, for: .normal)
     }
 }
 
@@ -161,16 +192,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             debugPrint("Cashin")
         }
     }
-    
-    // Center items
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-//        let cellWidth : CGFloat = 100
-//        let paddingInside: CGFloat = 10
-//
-//        let numberOfCells = floor(collectionView.frame.size.width / cellWidth)
-//        let edgeInsets = (collectionView.frame.size.width - (numberOfCells * cellWidth)) / 2 - paddingInside
-//        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
-//    }
 }
 
 // MARK: HomeViewModelDelegate
@@ -188,10 +209,12 @@ extension HomeViewController: HomeViewModelViewDelegate {
     func HomeViewModelBalanceSuccess(_ viewModel: HomeViewModel) {
         balanceLabel.hideSkeleton(transition: .crossDissolve(0.25))
         balanceLabel.text = "R$ " + String(describing: viewModel.model.balance?.balanceAvailable ?? 0)
+        changeVisibillity()
         dispatchGroup.leave()
     }
     
     func HomeViewModelBalanceFailure(_ viewModel: HomeViewModel, error: Error) {
+        changeVisibillity()
         print(error)
     }
 }

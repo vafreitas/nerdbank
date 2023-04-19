@@ -24,6 +24,8 @@ class ProfileViewController: BaseViewController {
     // MARK: Properties
     
     var viewModel: ProfileViewModel!
+    var picker = UIImagePickerController()
+    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(openPicker))
     
     // MARK: Initializer
     
@@ -54,7 +56,8 @@ class ProfileViewController: BaseViewController {
         profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
         profileImageView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
         profileImageView.layer.borderWidth = 0.2
-        
+        profileImageView.addGestureRecognizer(tapGesture)
+        loadImage()
         
         let image = traitCollection.userInterfaceStyle == .dark ? UIImage(named: "theme_sun_ico") : UIImage(named: "theme_moon_ico")
         navigationItem.rightBarButtonItem = .init(image: image,
@@ -116,7 +119,7 @@ class ProfileViewController: BaseViewController {
             style.imageSize = .init(width: 24, height: 24)
             style.titleAlignment = .center
             ToastManager.shared.style = style
-            var image = UIImage(named: "toast_success_ico")
+            let image = UIImage(named: "toast_success_ico")
             image?.withTintColor(.init(named: "profile_menu_ico") ?? .init())
             self.view.makeToast(nil, duration: 2.0, title: "Dados Copiados!", image: image)
         }
@@ -137,6 +140,67 @@ class ProfileViewController: BaseViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
         self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func saveImage() {
+        guard let data = profileImageView.image?.jpegData(compressionQuality: 0.5) else { return }
+        let encoded = try! PropertyListEncoder().encode(data)
+        UserDefaults.standard.set(encoded, forKey: "profile-image")
+    }
+    
+    func loadImage() {
+        guard let data = UserDefaults.standard.data(forKey: "profile-image") else { return }
+        let decoded = try! PropertyListDecoder().decode(Data.self, from: data)
+        let image = UIImage(data: decoded)
+        profileImageView.image = image
+    }
+}
+
+// MARK: UIImagePicker
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @objc func openPicker() {
+        let alert: UIAlertController = UIAlertController(title: "Qual opção deseja selecionar?",
+                                                         message: nil,
+                                                         preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            self.openCamera()
+        }
+        
+        let gallaryAction = UIAlertAction(title: "Galeria", style: .default) { _ in
+            self.openGallery()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
+        picker.delegate = self
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+    }
+    
+    func openCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera)
+        {
+            picker.sourceType = .camera
+            self.present(picker, animated: true, completion: nil)
+        } else {
+            let alertWarning = UIAlertView(title:"Atenção",
+                                           message: "Você não tem acesso a camera!",
+                                           delegate:nil, cancelButtonTitle:"Certo", otherButtonTitles:"")
+            alertWarning.show()
+        }
+    }
+    
+    func openGallery() {
+        picker.sourceType = .photoLibrary
+        self.present(picker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        profileImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        saveImage()
     }
 }
 

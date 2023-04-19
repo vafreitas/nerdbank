@@ -56,6 +56,9 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
         rootViewController.tabBar.clipsToBounds = true
         rootViewController.tabBar.insertSubview(blurView, at: 0)
         
+        blurView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.2).cgColor
+        blurView.layer.borderWidth = 0.4
+        
         NSLayoutConstraint.activate([
             blurView.leftAnchor.constraint(equalTo: rootViewController.view.leftAnchor, constant: 16),
             blurView.rightAnchor.constraint(equalTo: rootViewController.view.rightAnchor, constant: -16),
