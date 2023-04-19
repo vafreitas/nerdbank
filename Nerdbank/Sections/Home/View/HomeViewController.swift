@@ -86,18 +86,8 @@ class HomeViewController: BaseViewController {
         }
     }
     
-    @IBAction func openProfile(_ sender: Any) {
-        let bottomSheet = UIAlertController(title: "Options", message: "Choose", preferredStyle: .actionSheet)
-        let logoutAction = UIAlertAction(title: "Logout", style: .destructive) { _ in
-            Keychain.shared.clear()
-            self.viewModel.logout()
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        bottomSheet.addAction(logoutAction)
-        bottomSheet.addAction(cancelAction)
-        navigationController?.present(bottomSheet, animated: true)
+    @IBAction func openNotifications(_ sender: Any) {
+       
     }
 }
 

@@ -8,6 +8,27 @@
 import VFNetwork
 import Foundation
 
+
+// MARK: Menu Option
+
+struct ProfileMenuOptions {
+    var options: [ProfileMenuOption]
+}
+
+struct ProfileMenuOption {
+    var title: String
+    var icon: String
+    var action: ProfileMenuActionType
+}
+
+enum ProfileMenuActionType {
+    case person
+    case security
+    case logout
+}
+
+// MARK: Response
+
 struct ProfileResponse: VCodable {
     var id: UUID?
     var fullName: String?

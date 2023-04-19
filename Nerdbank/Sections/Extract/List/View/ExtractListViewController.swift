@@ -39,7 +39,7 @@ class ExtractListViewController: BaseViewController {
     }
     
     func setupView() {
-        title = "Extract"
+        title = "Extrato"
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     

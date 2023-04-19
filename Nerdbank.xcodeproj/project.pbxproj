@@ -62,6 +62,8 @@
 		C3E9FB7A29EDB61B00726896 /* ExtractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9FB7929EDB61B00726896 /* ExtractService.swift */; };
 		C3E9FB7E29EDC43D00726896 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9FB7C29EDC43D00726896 /* HomeCollectionCell.swift */; };
 		C3E9FB7F29EDC43D00726896 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */; };
+		F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */; };
+		F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */; };
 		F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */; };
 		F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */; };
 		F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */; };
@@ -143,6 +145,8 @@
 		C3E9FB7929EDB61B00726896 /* ExtractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractService.swift; sourceTree = "<group>"; };
 		C3E9FB7C29EDC43D00726896 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
+		F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuCell.swift; sourceTree = "<group>"; };
+		F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMenuCell.xib; sourceTree = "<group>"; };
 		F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
@@ -492,6 +496,7 @@
 		C3DEE3032915A2C400D84794 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6755EBD29F0685100757F02 /* Cell */,
 				C3DEE3062915A2DE00D84794 /* ProfileViewController.swift */,
 				C3DEE3072915A2DE00D84794 /* ProfileViewController.xib */,
 			);
@@ -600,6 +605,15 @@
 			children = (
 				C3E9FB7C29EDC43D00726896 /* HomeCollectionCell.swift */,
 				C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F6755EBD29F0685100757F02 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */,
+				F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -760,6 +774,7 @@
 				C3E9FB6E29EDB32C00726896 /* ExtractListViewController.xib in Resources */,
 				C39CE3A328DE483A00E9F2D9 /* Assets.xcassets in Resources */,
 				C3B402D628E0F9E0000A56C9 /* TransactionTableViewCell.xib in Resources */,
+				F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */,
 				C39CE3D328DE491900E9F2D9 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +828,7 @@
 				C39CE39A28DE483800E9F2D9 /* AppDelegate.swift in Sources */,
 				C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */,
 				C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */,
+				F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */,
 				C3DEE30B2915A2F100D84794 /* ProfileViewModel.swift in Sources */,
 				C362A64B28DE6AFB00889CF7 /* WelcomeViewModel.swift in Sources */,
 				C3DD866F29462D1300BADBFC /* StrokeColorAnimation.swift in Sources */,

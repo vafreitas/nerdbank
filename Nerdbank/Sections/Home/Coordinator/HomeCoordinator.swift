@@ -10,8 +10,6 @@ import UIKit
 
 enum HomeRoute: Route {
     case home
-    case profile
-    case logout
 }
 
 class HomeCoordinator: NavigationCoordinator<HomeRoute> {
@@ -29,16 +27,6 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
             let viewModel = HomeViewModel(router: weakRouter)
             let viewController = HomeViewController(viewModel: viewModel)
             return .set([viewController])
-        case .profile:
-            let viewModel = ProfileViewModel()
-            let viewController = ProfileViewController(viewModel: viewModel)
-            return .push(viewController)
-        case .logout:
-            if let window = UIApplication.shared.windows.first {
-                window.rootViewController = WelcomeCoordinator().rootViewController
-                window.makeKeyAndVisible()
-            }
-            return .none()
         }
     }
 }

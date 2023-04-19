@@ -6,9 +6,11 @@
 //
 
 import XCoordinator
+import UIKit
 
 enum ProfileRoute: Route {
     case profile
+    case logout
 }
 
 class ProfileCoordinator: NavigationCoordinator<ProfileRoute> {
@@ -22,9 +24,15 @@ class ProfileCoordinator: NavigationCoordinator<ProfileRoute> {
     override func prepareTransition(for route: ProfileRoute) -> NavigationTransition {
         switch route {
         case .profile:
-            let viewModel = ProfileViewModel()
+            let viewModel = ProfileViewModel(router: weakRouter)
             let profileVC = ProfileViewController(viewModel: viewModel)
             return .set([profileVC])
+        case .logout:
+            if let window = UIApplication.shared.windows.first {
+                window.rootViewController = WelcomeCoordinator().rootViewController
+                window.makeKeyAndVisible()
+            }
+            return .none()
         }
     }
 }

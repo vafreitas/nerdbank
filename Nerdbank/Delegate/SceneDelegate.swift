@@ -20,6 +20,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         router.setRoot(for: window ?? UIWindow(windowScene: windowScene))
+        
+//        if #available(iOS 13.0, *) {
+//            if UITraitCollection.current.userInterfaceStyle == .dark {
+//                window?.overrideUserInterfaceStyle = .dark
+//            } else {
+//                window?.overrideUserInterfaceStyle = .light
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

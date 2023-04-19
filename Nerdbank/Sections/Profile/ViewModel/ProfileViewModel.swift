@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import XCoordinator
 
 protocol ProfileViewModelViewDelegate: AnyObject {
     func profileViewModelMeSuccess(_ viewModel: ProfileViewModel)
@@ -18,14 +19,22 @@ class ProfileViewModel {
     
     let service: ProfileService
     var model: ProfileResponse
+    var menu: ProfileMenuOptions
+    var router: WeakRouter<ProfileRoute>
     
     weak var delegate: ProfileViewModelViewDelegate?
     
     // MARK: Initializer
     
-    init(model: ProfileResponse = .init(), service: ProfileService = .init()) {
+    init(model: ProfileResponse = .init(), service: ProfileService = .init(), router: WeakRouter<ProfileRoute>) {
         self.service = service
         self.model = model
+        self.router = router
+        self.menu = .init(options: [
+            .init(title: "Informações pessoais", icon: "profile_menu_info_ico", action: .person),
+            .init(title: "Segurança", icon: "profile_menu_sec_ico", action: .security),
+            .init(title: "Sair", icon: "profile_menu_logout_ico", action: .logout)
+        ])
     }
     
     // MARK: API Methods
@@ -40,5 +49,9 @@ class ProfileViewModel {
                 self.delegate?.profileViewModelMeFailure(self, error: error)
             }
         }
+    }
+    
+    func logout() {
+        router.trigger(.logout)
     }
 }

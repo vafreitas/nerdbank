@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,7 +68,7 @@
                                 <constraint firstAttribute="height" constant="41" id="TXw-tf-7mO"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                            <color key="textColor" red="0.10588235294117647" green="0.2196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" name="welcome_title"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everything you need is here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHO-0r-h8c">
@@ -76,7 +77,7 @@
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="760" constant="60" id="x6v-ga-4dH"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" name="welcome_subtitle"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -118,6 +119,12 @@
     </objects>
     <resources>
         <image name="welcome_ilust" width="390" height="303"/>
+        <namedColor name="welcome_subtitle">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="welcome_title">
+            <color red="0.10588235294117647" green="0.2196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

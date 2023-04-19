@@ -64,14 +64,4 @@ class HomeViewModel {
             }
         }
     }
-    
-    // MARK: Route Functions
-    
-    func openProfile() {
-        router?.trigger(.profile)
-    }
-    
-    func logout() {
-        router?.trigger(.logout)
-    }
 }

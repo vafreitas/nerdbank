@@ -43,18 +43,24 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
         self.init(homeRouter: homeCoordinator.strongRouter,
                   extractRouter: extractCoordinator.strongRouter,
                   profileRouter: profileCoordinator.strongRouter)
-        let blurEffect = UIBlurEffect(style: .light)
-        let blurView = UIVisualEffectView(effect: blurEffect)
         
+        let blurEffect = UIBlurEffect(style: .regular)
+        let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = rootViewController.tabBar.bounds
-        blurView.autoresizingMask = .flexibleHeight
-        blurView.roundCorners(radius: 28, corners: [.topLeft, .topRight])
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.roundCorners(radius: 29, corners: .allCorners)
         
         rootViewController.tabBar.tintColor = UIColor(hexString: "14955F")
         rootViewController.tabBar.shadowImage = UIImage()
         rootViewController.tabBar.backgroundImage = UIImage()
         rootViewController.tabBar.clipsToBounds = true
         rootViewController.tabBar.insertSubview(blurView, at: 0)
+        
+        NSLayoutConstraint.activate([
+            blurView.leftAnchor.constraint(equalTo: rootViewController.view.leftAnchor, constant: 16),
+            blurView.rightAnchor.constraint(equalTo: rootViewController.view.rightAnchor, constant: -16),
+            blurView.heightAnchor.constraint(equalToConstant: 58)
+        ])
     }
     
     init(homeRouter: StrongRouter<HomeRoute>, extractRouter: StrongRouter<ExtractRoute>, profileRouter: StrongRouter<ProfileRoute>) {
