@@ -7,7 +7,7 @@
 
 import UIKit
 import SkeletonView
-
+    
 class HomeViewController: BaseViewController {
     
     // MARK: Outlets
@@ -185,7 +185,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let option = viewModel.model.menuOptions?[indexPath.row] else { return }
         switch option.type {
         case .transfer:
-            debugPrint("Transfer")
+            viewModel.goToTransfer()
         case .payment:
             debugPrint("Payment")
         case .cashin:

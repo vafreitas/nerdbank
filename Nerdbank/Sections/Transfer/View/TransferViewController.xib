@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferViewController" customModule="Nerdbank" customModuleProvider="target">
+            <connections>
+                <outlet property="newTansferButton" destination="mBl-fG-NKv" id="v69-8I-cJp"/>
+                <outlet property="tableView" destination="ndu-kI-0Y5" id="SZf-fm-IT8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-fG-NKv">
+                    <rect key="frame" x="16" y="78" width="361" height="48"/>
+                    <color key="backgroundColor" red="0.078431372549019607" green="0.58431372549019611" blue="0.37254901960784315" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="chZ-i8-RbO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                    <color key="tintColor" red="0.1058823529" green="0.21960784310000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="titleEdgeInsets" minX="-28" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-440" maxY="0.0"/>
+                    <state key="normal" title="Nova Transferência" image="new_transfer_ico">
+                        <color key="titleColor" red="0.1058823529" green="0.21960784310000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="newTransferTapped:" destination="-1" eventType="touchUpInside" id="Mdg-TD-S9U"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ndu-kI-0Y5">
+                    <rect key="frame" x="0.0" y="146" width="393" height="706"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="mBl-fG-NKv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="19" id="3L8-2s-zeK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ndu-kI-0Y5" secondAttribute="trailing" id="RC2-rY-Tt8"/>
+                <constraint firstItem="mBl-fG-NKv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Rpe-6q-ITA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mBl-fG-NKv" secondAttribute="trailing" constant="16" id="aUY-L9-7qa"/>
+                <constraint firstItem="ndu-kI-0Y5" firstAttribute="top" secondItem="mBl-fG-NKv" secondAttribute="bottom" constant="20" id="enC-nC-Oh4"/>
+                <constraint firstItem="ndu-kI-0Y5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iYq-uk-yf1"/>
+                <constraint firstAttribute="bottom" secondItem="ndu-kI-0Y5" secondAttribute="bottom" id="y7E-le-yNy"/>
+            </constraints>
+            <point key="canvasLocation" x="131" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="new_transfer_ico" width="32" height="32"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

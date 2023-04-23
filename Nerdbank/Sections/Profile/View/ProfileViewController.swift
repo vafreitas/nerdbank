@@ -11,12 +11,13 @@ import Toast
 
 class ProfileViewController: BaseViewController {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var agencyLabel: UILabel!
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var bankLabel: UILabel!
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var bankInfoView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -51,14 +52,8 @@ class ProfileViewController: BaseViewController {
     func setupView() {
         title = "Perfil"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        setupProfileView()
         bankInfoView.layer.cornerRadius = 10
-        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
-        profileImageView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
-        profileImageView.layer.borderWidth = 0.2
-        profileImageView.addGestureRecognizer(tapGesture)
-        loadImage()
-        
         let image = traitCollection.userInterfaceStyle == .dark ? UIImage(named: "theme_sun_ico") : UIImage(named: "theme_moon_ico")
         navigationItem.rightBarButtonItem = .init(image: image,
                                                   style: .plain,
@@ -66,17 +61,12 @@ class ProfileViewController: BaseViewController {
                                                   action: #selector(changeTheme))
     }
     
-    @objc func changeTheme() {
-        let window = UIApplication.shared.keyWindow
-        let interfaceStyle = window?.overrideUserInterfaceStyle
-        
-        if interfaceStyle == .light {
-            window?.overrideUserInterfaceStyle = .dark
-            navigationItem.rightBarButtonItem?.image = UIImage(named: "theme_sun_ico")
-        } else {
-            window?.overrideUserInterfaceStyle = .light
-            navigationItem.rightBarButtonItem?.image = UIImage(named: "theme_moon_ico")
-        }
+    func setupProfileView() {
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
+        profileImageView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.4).cgColor
+        profileImageView.layer.borderWidth = 0.2
+        profileImageView.addGestureRecognizer(tapGesture)
+        loadImage()
     }
     
     func setupTableView() {
@@ -102,6 +92,21 @@ class ProfileViewController: BaseViewController {
         accountLabel.text = "\(user.bankAccount?.number ?? 0)-\(user.bankAccount?.digit ?? 0)"
         bankLabel.text = "\(user.bankAccount?.bankName ?? "NA") - \(user.bankAccount?.bankNumber ?? 0)"
     }
+    
+    @objc func changeTheme() {
+        let window = UIApplication.shared.keyWindow
+        let interfaceStyle = window?.overrideUserInterfaceStyle
+        
+        if interfaceStyle == .light {
+            window?.overrideUserInterfaceStyle = .dark
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "theme_sun_ico")
+        } else {
+            window?.overrideUserInterfaceStyle = .light
+            navigationItem.rightBarButtonItem?.image = UIImage(named: "theme_moon_ico")
+        }
+    }
+    
+    // MARK: Actions
     
     @IBAction func copyToClipboard(_ sender: Any) {
         let text =  """

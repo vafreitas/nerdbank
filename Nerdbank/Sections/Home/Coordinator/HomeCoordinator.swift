@@ -10,6 +10,7 @@ import UIKit
 
 enum HomeRoute: Route {
     case home
+    case transfer
 }
 
 class HomeCoordinator: NavigationCoordinator<HomeRoute> {
@@ -27,6 +28,11 @@ class HomeCoordinator: NavigationCoordinator<HomeRoute> {
             let viewModel = HomeViewModel(router: weakRouter)
             let viewController = HomeViewController(viewModel: viewModel)
             return .set([viewController])
+        case .transfer:
+            let viewModel = TransferViewModel()
+            let viewController = TransferViewController(viewModel: viewModel)
+            viewController.hidesBottomBarWhenPushed = true
+            return .push(viewController)
         }
     }
 }

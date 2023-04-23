@@ -58,10 +58,9 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
         
         blurView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.2).cgColor
         blurView.layer.borderWidth = 0.4
-        
         NSLayoutConstraint.activate([
-            blurView.leftAnchor.constraint(equalTo: rootViewController.view.leftAnchor, constant: 16),
-            blurView.rightAnchor.constraint(equalTo: rootViewController.view.rightAnchor, constant: -16),
+            blurView.leftAnchor.constraint(equalTo: rootViewController.tabBar.leftAnchor, constant: 16),
+            blurView.rightAnchor.constraint(equalTo: rootViewController.tabBar.rightAnchor, constant: -16),
             blurView.heightAnchor.constraint(equalToConstant: 58)
         ])
     }

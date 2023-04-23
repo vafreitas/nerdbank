@@ -65,6 +65,17 @@
 		F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */; };
 		F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */; };
 		F6755EC429F07C4200757F02 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = F6755EC329F07C4200757F02 /* Toast */; };
+		F687E4F629F44D59008F207F /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4F429F44D59008F207F /* TransferViewController.swift */; };
+		F687E4F729F44D59008F207F /* TransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687E4F529F44D59008F207F /* TransferViewController.xib */; };
+		F687E4F929F44D6B008F207F /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4F829F44D6B008F207F /* TransferViewModel.swift */; };
+		F687E4FB29F45280008F207F /* TransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4FA29F45280008F207F /* TransferModel.swift */; };
+		F687E4FF29F4B3C3008F207F /* TransferFavoriteOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4FD29F4B3C3008F207F /* TransferFavoriteOptionCell.swift */; };
+		F687E50029F4B3C3008F207F /* TransferFavoriteOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687E4FE29F4B3C3008F207F /* TransferFavoriteOptionCell.xib */; };
+		F687E50329F4B580008F207F /* TransferCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E50229F4B580008F207F /* TransferCoordinator.swift */; };
+		F687E50729F4C028008F207F /* TransferRecentOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E50529F4C028008F207F /* TransferRecentOptionCell.swift */; };
+		F687E50829F4C028008F207F /* TransferRecentOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687E50629F4C028008F207F /* TransferRecentOptionCell.xib */; };
+		F687E50C29F4C093008F207F /* TransferRecentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E50A29F4C093008F207F /* TransferRecentCollectionCell.swift */; };
+		F687E50D29F4C093008F207F /* TransferRecentCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687E50B29F4C093008F207F /* TransferRecentCollectionCell.xib */; };
 		F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */; };
 		F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */; };
 		F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */; };
@@ -148,6 +159,17 @@
 		C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
 		F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuCell.swift; sourceTree = "<group>"; };
 		F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMenuCell.xib; sourceTree = "<group>"; };
+		F687E4F429F44D59008F207F /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		F687E4F529F44D59008F207F /* TransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
+		F687E4F829F44D6B008F207F /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
+		F687E4FA29F45280008F207F /* TransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferModel.swift; sourceTree = "<group>"; };
+		F687E4FD29F4B3C3008F207F /* TransferFavoriteOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferFavoriteOptionCell.swift; sourceTree = "<group>"; };
+		F687E4FE29F4B3C3008F207F /* TransferFavoriteOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferFavoriteOptionCell.xib; sourceTree = "<group>"; };
+		F687E50229F4B580008F207F /* TransferCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCoordinator.swift; sourceTree = "<group>"; };
+		F687E50529F4C028008F207F /* TransferRecentOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecentOptionCell.swift; sourceTree = "<group>"; };
+		F687E50629F4C028008F207F /* TransferRecentOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecentOptionCell.xib; sourceTree = "<group>"; };
+		F687E50A29F4C093008F207F /* TransferRecentCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferRecentCollectionCell.swift; sourceTree = "<group>"; };
+		F687E50B29F4C093008F207F /* TransferRecentCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferRecentCollectionCell.xib; sourceTree = "<group>"; };
 		F6918E3C29E3971A00808966 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
@@ -306,6 +328,7 @@
 		C39CE3C928DE487F00E9F2D9 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F687E4F029F44D2D008F207F /* Transfer */,
 				C3E9FB6429EDB28600726896 /* Extract */,
 				F6BCC6FD29EB19A1006B35C5 /* Tab */,
 				C3DEE3022915A2BF00D84794 /* Profile */,
@@ -620,6 +643,80 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F687E4F029F44D2D008F207F /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				F687E50129F4B576008F207F /* Coordinator */,
+				F687E4F329F44D3D008F207F /* Model */,
+				F687E4F229F44D37008F207F /* ViewModel */,
+				F687E4F129F44D33008F207F /* View */,
+			);
+			path = Transfer;
+			sourceTree = "<group>";
+		};
+		F687E4F129F44D33008F207F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F687E50429F4BD52008F207F /* Header */,
+				F687E4FC29F4B3A2008F207F /* Cell */,
+				F687E4F429F44D59008F207F /* TransferViewController.swift */,
+				F687E4F529F44D59008F207F /* TransferViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F687E4F229F44D37008F207F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F687E4F829F44D6B008F207F /* TransferViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F687E4F329F44D3D008F207F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F687E4FA29F45280008F207F /* TransferModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F687E4FC29F4B3A2008F207F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F687E50929F4C074008F207F /* Collection */,
+				F687E4FD29F4B3C3008F207F /* TransferFavoriteOptionCell.swift */,
+				F687E4FE29F4B3C3008F207F /* TransferFavoriteOptionCell.xib */,
+				F687E50529F4C028008F207F /* TransferRecentOptionCell.swift */,
+				F687E50629F4C028008F207F /* TransferRecentOptionCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F687E50129F4B576008F207F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				F687E50229F4B580008F207F /* TransferCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		F687E50429F4BD52008F207F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		F687E50929F4C074008F207F /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				F687E50A29F4C093008F207F /* TransferRecentCollectionCell.swift */,
+				F687E50B29F4C093008F207F /* TransferRecentCollectionCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 		F6BCC6FD29EB19A1006B35C5 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -771,12 +868,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3DEE3092915A2DE00D84794 /* ProfileViewController.xib in Resources */,
+				F687E50029F4B3C3008F207F /* TransferFavoriteOptionCell.xib in Resources */,
 				C3E9FB7F29EDC43D00726896 /* HomeCollectionCell.xib in Resources */,
 				C39CE3A628DE483A00E9F2D9 /* LaunchScreen.storyboard in Resources */,
 				C362A64928DE6AF200889CF7 /* WelcomeViewController.xib in Resources */,
+				F687E50829F4C028008F207F /* TransferRecentOptionCell.xib in Resources */,
+				F687E50D29F4C093008F207F /* TransferRecentCollectionCell.xib in Resources */,
 				C3B402CC28E0EE6E000A56C9 /* HomeViewController.xib in Resources */,
 				C3E9FB6E29EDB32C00726896 /* ExtractListViewController.xib in Resources */,
 				C39CE3A328DE483A00E9F2D9 /* Assets.xcassets in Resources */,
+				F687E4F729F44D59008F207F /* TransferViewController.xib in Resources */,
 				C3B402D628E0F9E0000A56C9 /* TransactionTableViewCell.xib in Resources */,
 				F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */,
 				C39CE3D328DE491900E9F2D9 /* LoginViewController.xib in Resources */,
@@ -811,6 +912,7 @@
 				C3E9FB7A29EDB61B00726896 /* ExtractService.swift in Sources */,
 				C3DD866D29462C5200BADBFC /* RotationAnimation.swift in Sources */,
 				C3E9FB7829EDB61400726896 /* ExtractAPI.swift in Sources */,
+				F687E50729F4C028008F207F /* TransferRecentOptionCell.swift in Sources */,
 				C362A64828DE6AF200889CF7 /* WelcomeViewController.swift in Sources */,
 				C3B402C528E0A0D6000A56C9 /* Keychain.swift in Sources */,
 				C3E9FB7329EDB35100726896 /* ExtractListModel.swift in Sources */,
@@ -818,12 +920,14 @@
 				C3DD867229462DB300BADBFC /* BaseViewController.swift in Sources */,
 				C3E9FB7029EDB33C00726896 /* ExtractListViewModel.swift in Sources */,
 				C3031BDC28E13D8400034765 /* BalanceModel.swift in Sources */,
+				F687E50C29F4C093008F207F /* TransferRecentCollectionCell.swift in Sources */,
 				C3DEE3082915A2DE00D84794 /* ProfileViewController.swift in Sources */,
 				F6BCC70529EB1FF6006B35C5 /* ProfileCoordinator.swift in Sources */,
 				C39CE3D528DE492200E9F2D9 /* LoginViewModel.swift in Sources */,
 				F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */,
 				F6918E3D29E3971A00808966 /* UIColor+Extensions.swift in Sources */,
 				C39CE3D228DE491900E9F2D9 /* LoginViewController.swift in Sources */,
+				F687E4FB29F45280008F207F /* TransferModel.swift in Sources */,
 				C3B402CB28E0EE6E000A56C9 /* HomeViewController.swift in Sources */,
 				F6BCC70029EB19B0006B35C5 /* HomeTabBarCoordinator.swift in Sources */,
 				C3031BD928E13C9D00034765 /* HomeAPI.swift in Sources */,
@@ -832,16 +936,20 @@
 				C39CE39A28DE483800E9F2D9 /* AppDelegate.swift in Sources */,
 				C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */,
 				C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */,
+				F687E4FF29F4B3C3008F207F /* TransferFavoriteOptionCell.swift in Sources */,
 				F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */,
 				C3DEE30B2915A2F100D84794 /* ProfileViewModel.swift in Sources */,
 				C362A64B28DE6AFB00889CF7 /* WelcomeViewModel.swift in Sources */,
 				C3DD866F29462D1300BADBFC /* StrokeColorAnimation.swift in Sources */,
 				C39CE3E428DE540F00E9F2D9 /* NBTextField.swift in Sources */,
+				F687E4F629F44D59008F207F /* TransferViewController.swift in Sources */,
 				C362A64128DE681F00889CF7 /* LoginCoordinator.swift in Sources */,
+				F687E50329F4B580008F207F /* TransferCoordinator.swift in Sources */,
 				C3031BD428E13B7800034765 /* UIView+Extensions.swift in Sources */,
 				C39CE39C28DE483800E9F2D9 /* SceneDelegate.swift in Sources */,
 				C3DD866B29462A7000BADBFC /* StrokeAnimation.swift in Sources */,
 				C39CE3E028DE4BC900E9F2D9 /* LoginService.swift in Sources */,
+				F687E4F929F44D6B008F207F /* TransferViewModel.swift in Sources */,
 				C3DEE30D2915A30100D84794 /* ProfileModel.swift in Sources */,
 				C3B402D128E0EE93000A56C9 /* HomeCoordinator.swift in Sources */,
 				C3B402CE28E0EE7A000A56C9 /* HomeViewModel.swift in Sources */,

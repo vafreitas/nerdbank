@@ -64,4 +64,11 @@ class HomeViewModel {
             }
         }
     }
+    
+    // MARK: Routes
+    
+    func goToTransfer() {
+        router?.trigger(.transfer)
+    }
+    
 }
