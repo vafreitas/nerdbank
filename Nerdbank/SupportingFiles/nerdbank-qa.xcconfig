@@ -1,0 +1,14 @@
+//
+//  nerdbank-qa.xcconfig
+//  Nerdbank
+//
+//  Created by Victor Freitas on 16/07/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+Base_URL = localhost:8080
+Environment = production
+Protocol = http

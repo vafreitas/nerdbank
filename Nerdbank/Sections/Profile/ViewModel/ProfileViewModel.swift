@@ -19,6 +19,7 @@ class ProfileViewModel {
     
     let service: ProfileService
     var model: ProfileResponse
+    var profileRequest: ProfileRequest = .init()
     var menu: ProfileMenuOptions
     var router: WeakRouter<ProfileRoute>
     
@@ -51,6 +52,16 @@ class ProfileViewModel {
         }
     }
     
+    func uploadImage() {
+        service.uploadImage(model: profileRequest) { result in
+            switch result {
+            case let .success(response):
+                debugPrint(response)
+            case let .failure(error):
+                break
+            }
+        }
+    }
     func logout() {
         router.trigger(.logout)
     }

@@ -7,11 +7,11 @@
 	<key>NSCameraUsageDescription</key>
 	<string>É solicitado o acesso a camera para que possa tirar uma foto.</string>
 	<key>Base_URL</key>
-	<string>bagion.api.nerdbank.io</string>
+	<string>$(Base_URL)</string>
 	<key>Environment</key>
-	<string>sandbox</string>
+	<string>$(Environment)</string>
 	<key>Protocol</key>
-	<string>https</string>
+	<string>$(Protocol)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

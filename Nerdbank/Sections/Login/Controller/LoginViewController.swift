@@ -9,16 +9,14 @@ import UIKit
 import KeychainSwift
 
 class LoginViewController: BaseViewController {
-
-    // MARK: Outlets
-    
-    @IBOutlet weak var passwordTextField: NBTextField!
-    @IBOutlet weak var emailTextField: NBTextField!
-    @IBOutlet weak var signInButton: UIButton!
     
     // MARK: Properties
     
     var viewModel: LoginViewModel
+    var rootView = LoginView()
+    override func loadView() {
+        view = rootView
+    }
     
     // MARK: Initializer
     
@@ -36,6 +34,13 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupActions()
+    }
+    
+    func setupActions() {
+        rootView.enterAction = {
+            self.loginTapped()
+        }
     }
     
     // We are willing to become first responder to get shake motion
@@ -48,20 +53,20 @@ class LoginViewController: BaseViewController {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            emailTextField.text = "vitoralves59@gmail.com"
-            passwordTextField.text = "the.pass"
+            rootView.emailTextField.text = "vitoralves59@gmail.com"
+            rootView.passwordTextField.text = "the.pass"
         }
     }
         
     // MARK: Actions
     
-    @IBAction func loginTapped(_ sender: Any) {
-        let model = LoginRequestModel(email: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+    func loginTapped() {
+        let model = LoginRequestModel(email: rootView.emailTextField.text ?? "", password: rootView.passwordTextField.text ?? "")
         isLoading = true
         viewModel.authenticate(model)
     }
     
-    @IBAction func forgetPasswordTapped(_ sender: Any) {
+    func forgetPasswordTapped(_ sender: Any) {
         
     }
 }

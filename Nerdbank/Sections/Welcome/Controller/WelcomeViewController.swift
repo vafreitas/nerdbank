@@ -8,6 +8,12 @@
 import UIKit
 
 class WelcomeViewController: BaseViewController {
+    
+    // MARK: Root View
+    let rootView = WelcomeView()
+    override func loadView() {
+        view = rootView
+    }
 
     // MARK: Properties
     
@@ -28,15 +34,14 @@ class WelcomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupActions()
     }
     
     // MARK: Actions
-
-    @IBAction func enterTapped(_ sender: Any) {
-        viewModel.goToSignIn()
-    }
     
-    @IBAction func singUpTapped(_ sender: Any) {
-        
+    func setupActions() {
+        rootView.signInAction = { [weak self] in
+            self?.viewModel .goToSignIn()
+        }
     }
 }

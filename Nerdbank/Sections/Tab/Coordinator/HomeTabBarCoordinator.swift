@@ -31,12 +31,12 @@ class HomeTabBarCoordinator: TabBarCoordinator<TabBarRoute> {
                                                                      tag: 0)
         
         let extractCoordinator = ExtractListCoordinator()
-        extractCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Extract",
+        extractCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Extrato",
                                                                         image: .init(named: "tab_extract_ico"),
                                                                         tag: 1)
         
         let profileCoordinator = ProfileCoordinator()
-        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Profile",
+        profileCoordinator.rootViewController.tabBarItem = UITabBarItem(title: "Perfil",
                                                                         image: .init(named: "tab_profile_ico"),
                                                                         tag: 2)
         

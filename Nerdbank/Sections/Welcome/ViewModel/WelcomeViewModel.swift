@@ -8,13 +8,13 @@
 import XCoordinator
 
 class WelcomeViewModel {
-    let router: StrongRouter<WelcomeRoute>
+    let router: StrongRouter<WelcomeRoute>?
     
-    init(router: StrongRouter<WelcomeRoute>) {
+    init(router: StrongRouter<WelcomeRoute>? = nil) {
         self.router = router
     }
     
     func goToSignIn() {
-        router.trigger(.login)
+        router?.trigger(.login)
     }
 }

@@ -27,6 +27,15 @@ enum ProfileMenuActionType {
     case logout
 }
 
+struct ProfileRequest: VCodable {
+    var data: Data = .init()
+    var filename: String = ""
+}
+
+struct ProfileUploadResponse: VCodable {
+    var imageURL: String
+}
+
 // MARK: Response
 
 struct ProfileResponse: VCodable {

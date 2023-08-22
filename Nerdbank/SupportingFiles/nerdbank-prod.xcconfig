@@ -1,0 +1,13 @@
+//
+//  nerdbank-prod.xcconfig
+//  Nerdbank
+//
+//  Created by Victor Freitas on 16/07/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+Base_URL = bagion.api.nerdbank.io
+Environment = sandbox
+Protocol = https

@@ -204,8 +204,16 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true)
-        profileImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        saveImage()
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        
+        guard let imageData = image?.jpegData(compressionQuality: 0.8) else {
+              return
+        }
+        
+        viewModel.profileRequest.data = imageData
+        viewModel.profileRequest.filename = "profile-picture"
+        viewModel.uploadImage()
+//        saveImage()
     }
 }
 

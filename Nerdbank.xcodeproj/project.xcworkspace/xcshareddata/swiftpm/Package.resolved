@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "aloestackview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marlimox/AloeStackView",
+      "state" : {
+        "revision" : "28ef1e50cef1eb38512fae67eb45ddc508f9a9f8",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "keychain-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/evgenyneu/keychain-swift.git",
@@ -28,6 +37,15 @@
       }
     },
     {
+      "identity" : "tinyconstraints",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roberthein/TinyConstraints",
+      "state" : {
+        "revision" : "3262e5c591d4ab6272255df2087a01bbebd138dc",
+        "version" : "4.0.2"
+      }
+    },
+    {
       "identity" : "toast-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/scalessec/Toast-Swift",
@@ -37,12 +55,21 @@
       }
     },
     {
+      "identity" : "uicodekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vafreitas/UICodeKit",
+      "state" : {
+        "revision" : "ab9c3eaf389caaf1f1432a4266bf36d9196385ee",
+        "version" : "1.0.9"
+      }
+    },
+    {
       "identity" : "vfnetwork",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vafreitas/VFNetwork",
       "state" : {
-        "revision" : "18e6624da14f81b0ea95f84ec38464c70ec17f0d",
-        "version" : "1.4.4"
+        "branch" : "beta/1.4.5",
+        "revision" : "eb39b722debbcec578e440811c5c86b26f456402"
       }
     },
     {

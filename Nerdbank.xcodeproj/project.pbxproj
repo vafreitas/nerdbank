@@ -15,7 +15,6 @@
 		C362A63E28DE66DB00889CF7 /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = C362A63D28DE66DB00889CF7 /* XCoordinator */; };
 		C362A64128DE681F00889CF7 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A64028DE681F00889CF7 /* LoginCoordinator.swift */; };
 		C362A64828DE6AF200889CF7 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A64628DE6AF200889CF7 /* WelcomeViewController.swift */; };
-		C362A64928DE6AF200889CF7 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C362A64728DE6AF200889CF7 /* WelcomeViewController.xib */; };
 		C362A64B28DE6AFB00889CF7 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A64A28DE6AFB00889CF7 /* WelcomeViewModel.swift */; };
 		C362A64D28DE6B0400889CF7 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C362A64C28DE6B0400889CF7 /* WelcomeCoordinator.swift */; };
 		C39CE39A28DE483800E9F2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE39928DE483800E9F2D9 /* AppDelegate.swift */; };
@@ -26,7 +25,6 @@
 		C39CE3BB28DE483A00E9F2D9 /* NerdbankUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3BA28DE483A00E9F2D9 /* NerdbankUITests.swift */; };
 		C39CE3BD28DE483A00E9F2D9 /* NerdbankUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3BC28DE483A00E9F2D9 /* NerdbankUITestsLaunchTests.swift */; };
 		C39CE3D228DE491900E9F2D9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3D028DE491900E9F2D9 /* LoginViewController.swift */; };
-		C39CE3D328DE491900E9F2D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39CE3D128DE491900E9F2D9 /* LoginViewController.xib */; };
 		C39CE3D528DE492200E9F2D9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3D428DE492200E9F2D9 /* LoginViewModel.swift */; };
 		C39CE3DC28DE4BB200E9F2D9 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3DB28DE4BB200E9F2D9 /* LoginModel.swift */; };
 		C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39CE3DD28DE4BC300E9F2D9 /* LoginAPI.swift */; };
@@ -62,9 +60,13 @@
 		C3E9FB7A29EDB61B00726896 /* ExtractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9FB7929EDB61B00726896 /* ExtractService.swift */; };
 		C3E9FB7E29EDC43D00726896 /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E9FB7C29EDC43D00726896 /* HomeCollectionCell.swift */; };
 		C3E9FB7F29EDC43D00726896 /* HomeCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */; };
+		F632DB272A64E464004908EC /* nerdbank-qa.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F632DB262A64E464004908EC /* nerdbank-qa.xcconfig */; };
+		F632DB292A64E4A8004908EC /* nerdbank-prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F632DB282A64E4A8004908EC /* nerdbank-prod.xcconfig */; };
 		F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */; };
 		F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */; };
 		F6755EC429F07C4200757F02 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = F6755EC329F07C4200757F02 /* Toast */; };
+		F6816B8E2A6A0CCF006DF352 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6816B8D2A6A0CCF006DF352 /* LoginView.swift */; };
+		F6816B912A6A0D04006DF352 /* UICodeKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6816B902A6A0D04006DF352 /* UICodeKit */; };
 		F687E4F629F44D59008F207F /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4F429F44D59008F207F /* TransferViewController.swift */; };
 		F687E4F729F44D59008F207F /* TransferViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F687E4F529F44D59008F207F /* TransferViewController.xib */; };
 		F687E4F929F44D6B008F207F /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F687E4F829F44D6B008F207F /* TransferViewModel.swift */; };
@@ -81,6 +83,7 @@
 		F6BCC70329EB1CDE006B35C5 /* Transition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */; };
 		F6BCC70529EB1FF6006B35C5 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BCC70429EB1FF6006B35C5 /* ProfileCoordinator.swift */; };
 		F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = F6BF4C01299728EE00B5A834 /* VFNetwork */; };
+		F6EBFF3C2A9453CB0003C891 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EBFF3B2A9453CB0003C891 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +111,6 @@
 		C3031BDF28E140B200034765 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		C362A64028DE681F00889CF7 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		C362A64628DE6AF200889CF7 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		C362A64728DE6AF200889CF7 /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		C362A64A28DE6AFB00889CF7 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		C362A64C28DE6B0400889CF7 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		C39CE39628DE483800E9F2D9 /* Nerdbank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdbank.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +125,6 @@
 		C39CE3BA28DE483A00E9F2D9 /* NerdbankUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerdbankUITests.swift; sourceTree = "<group>"; };
 		C39CE3BC28DE483A00E9F2D9 /* NerdbankUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerdbankUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C39CE3D028DE491900E9F2D9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C39CE3D128DE491900E9F2D9 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C39CE3D428DE492200E9F2D9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C39CE3DB28DE4BB200E9F2D9 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C39CE3DD28DE4BC300E9F2D9 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
@@ -157,8 +158,11 @@
 		C3E9FB7929EDB61B00726896 /* ExtractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractService.swift; sourceTree = "<group>"; };
 		C3E9FB7C29EDC43D00726896 /* HomeCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
 		C3E9FB7D29EDC43D00726896 /* HomeCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionCell.xib; sourceTree = "<group>"; };
+		F632DB262A64E464004908EC /* nerdbank-qa.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "nerdbank-qa.xcconfig"; sourceTree = "<group>"; };
+		F632DB282A64E4A8004908EC /* nerdbank-prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "nerdbank-prod.xcconfig"; sourceTree = "<group>"; };
 		F6755EBE29F0686200757F02 /* ProfileMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuCell.swift; sourceTree = "<group>"; };
 		F6755EBF29F0686200757F02 /* ProfileMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileMenuCell.xib; sourceTree = "<group>"; };
+		F6816B8D2A6A0CCF006DF352 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F687E4F429F44D59008F207F /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		F687E4F529F44D59008F207F /* TransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
 		F687E4F829F44D6B008F207F /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		F6BCC6FF29EB19B0006B35C5 /* HomeTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarCoordinator.swift; sourceTree = "<group>"; };
 		F6BCC70229EB1CDE006B35C5 /* Transition+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transition+Extensions.swift"; sourceTree = "<group>"; };
 		F6BCC70429EB1FF6006B35C5 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		F6EBFF3B2A9453CB0003C891 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +188,7 @@
 			files = (
 				C39CFA8D28E20638008E17DC /* SkeletonView in Frameworks */,
 				C3DA970928DFEE7800234FA3 /* KeychainSwift in Frameworks */,
+				F6816B912A6A0D04006DF352 /* UICodeKit in Frameworks */,
 				C362A63E28DE66DB00889CF7 /* XCoordinator in Frameworks */,
 				F6755EC429F07C4200757F02 /* Toast in Frameworks */,
 				F6BF4C02299728EE00B5A834 /* VFNetwork in Frameworks */,
@@ -244,6 +250,7 @@
 		C362A64228DE6AD700889CF7 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				F6EBFF392A9453B70003C891 /* Controller */,
 				C362A64528DE6AE400889CF7 /* Coordinator */,
 				C362A64428DE6AE000889CF7 /* ViewModel */,
 				C362A64328DE6ADD00889CF7 /* View */,
@@ -254,8 +261,7 @@
 		C362A64328DE6ADD00889CF7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C362A64628DE6AF200889CF7 /* WelcomeViewController.swift */,
-				C362A64728DE6AF200889CF7 /* WelcomeViewController.xib */,
+				F6EBFF3B2A9453CB0003C891 /* WelcomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,6 +350,8 @@
 			children = (
 				C39CE3A428DE483A00E9F2D9 /* LaunchScreen.storyboard */,
 				C39CE3A728DE483A00E9F2D9 /* Info.plist */,
+				F632DB262A64E464004908EC /* nerdbank-qa.xcconfig */,
+				F632DB282A64E4A8004908EC /* nerdbank-prod.xcconfig */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -368,6 +376,7 @@
 		C39CE3CD28DE48FD00E9F2D9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				F6816B8C2A6A0CC3006DF352 /* Controller */,
 				C362A63F28DE681500889CF7 /* Coordinator */,
 				C39CE3DA28DE4BA800E9F2D9 /* Model */,
 				C39CE3D928DE4B7100E9F2D9 /* Service */,
@@ -380,8 +389,7 @@
 		C39CE3CE28DE490300E9F2D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C39CE3D028DE491900E9F2D9 /* LoginViewController.swift */,
-				C39CE3D128DE491900E9F2D9 /* LoginViewController.xib */,
+				F6816B8D2A6A0CCF006DF352 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,6 +651,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		F6816B8C2A6A0CC3006DF352 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C39CE3D028DE491900E9F2D9 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F687E4F029F44D2D008F207F /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,6 +765,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		F6EBFF392A9453B70003C891 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C362A64628DE6AF200889CF7 /* WelcomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -771,6 +795,7 @@
 				C39CFA8C28E20638008E17DC /* SkeletonView */,
 				F6BF4C01299728EE00B5A834 /* VFNetwork */,
 				F6755EC329F07C4200757F02 /* Toast */,
+				F6816B902A6A0D04006DF352 /* UICodeKit */,
 			);
 			productName = Nerdbank;
 			productReference = C39CE39628DE483800E9F2D9 /* Nerdbank.app */;
@@ -850,6 +875,7 @@
 				C39CFA8B28E20638008E17DC /* XCRemoteSwiftPackageReference "SkeletonView" */,
 				F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */,
 				F6755EC229F07C4200757F02 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				F6816B8F2A6A0D04006DF352 /* XCRemoteSwiftPackageReference "UICodeKit" */,
 			);
 			productRefGroup = C39CE39728DE483800E9F2D9 /* Products */;
 			projectDirPath = "";
@@ -871,16 +897,16 @@
 				F687E50029F4B3C3008F207F /* TransferFavoriteOptionCell.xib in Resources */,
 				C3E9FB7F29EDC43D00726896 /* HomeCollectionCell.xib in Resources */,
 				C39CE3A628DE483A00E9F2D9 /* LaunchScreen.storyboard in Resources */,
-				C362A64928DE6AF200889CF7 /* WelcomeViewController.xib in Resources */,
 				F687E50829F4C028008F207F /* TransferRecentOptionCell.xib in Resources */,
 				F687E50D29F4C093008F207F /* TransferRecentCollectionCell.xib in Resources */,
+				F632DB272A64E464004908EC /* nerdbank-qa.xcconfig in Resources */,
 				C3B402CC28E0EE6E000A56C9 /* HomeViewController.xib in Resources */,
 				C3E9FB6E29EDB32C00726896 /* ExtractListViewController.xib in Resources */,
 				C39CE3A328DE483A00E9F2D9 /* Assets.xcassets in Resources */,
 				F687E4F729F44D59008F207F /* TransferViewController.xib in Resources */,
 				C3B402D628E0F9E0000A56C9 /* TransactionTableViewCell.xib in Resources */,
 				F6755EC129F0686200757F02 /* ProfileMenuCell.xib in Resources */,
-				C39CE3D328DE491900E9F2D9 /* LoginViewController.xib in Resources */,
+				F632DB292A64E4A8004908EC /* nerdbank-prod.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +962,7 @@
 				C39CE39A28DE483800E9F2D9 /* AppDelegate.swift in Sources */,
 				C3DEE3122915AB3200D84794 /* ProfileService.swift in Sources */,
 				C39CE3DE28DE4BC300E9F2D9 /* LoginAPI.swift in Sources */,
+				F6EBFF3C2A9453CB0003C891 /* WelcomeView.swift in Sources */,
 				F687E4FF29F4B3C3008F207F /* TransferFavoriteOptionCell.swift in Sources */,
 				F6755EC029F0686200757F02 /* ProfileMenuCell.swift in Sources */,
 				C3DEE30B2915A2F100D84794 /* ProfileViewModel.swift in Sources */,
@@ -955,6 +982,7 @@
 				C3B402CE28E0EE7A000A56C9 /* HomeViewModel.swift in Sources */,
 				C362A64D28DE6B0400889CF7 /* WelcomeCoordinator.swift in Sources */,
 				C3031BE028E140B200034765 /* HomeModel.swift in Sources */,
+				F6816B8E2A6A0CCF006DF352 /* LoginView.swift in Sources */,
 				C3E9FB6729EDB2BE00726896 /* ExtractListCoordinator.swift in Sources */,
 				C3DEE3102915AB2C00D84794 /* ProfileAPI.swift in Sources */,
 			);
@@ -1120,6 +1148,7 @@
 		};
 		C39CE3C128DE483A00E9F2D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F632DB282A64E4A8004908EC /* nerdbank-prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1152,6 +1181,7 @@
 		};
 		C39CE3C228DE483A00E9F2D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F632DB282A64E4A8004908EC /* nerdbank-prod.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1264,7 +1294,7 @@
 				C39CE3BF28DE483A00E9F2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C39CE3C028DE483A00E9F2D9 /* Build configuration list for PBXNativeTarget "Nerdbank" */ = {
 			isa = XCConfigurationList;
@@ -1273,7 +1303,7 @@
 				C39CE3C228DE483A00E9F2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C39CE3C328DE483A00E9F2D9 /* Build configuration list for PBXNativeTarget "NerdbankTests" */ = {
 			isa = XCConfigurationList;
@@ -1282,7 +1312,7 @@
 				C39CE3C528DE483A00E9F2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		C39CE3C628DE483A00E9F2D9 /* Build configuration list for PBXNativeTarget "NerdbankUITests" */ = {
 			isa = XCConfigurationList;
@@ -1291,7 +1321,7 @@
 				C39CE3C828DE483A00E9F2D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
@@ -1328,12 +1358,20 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		F6816B8F2A6A0D04006DF352 /* XCRemoteSwiftPackageReference "UICodeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vafreitas/UICodeKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		F6BF4C00299728EE00B5A834 /* XCRemoteSwiftPackageReference "VFNetwork" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vafreitas/VFNetwork";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = beta/1.4.5;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1358,6 +1396,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F6755EC229F07C4200757F02 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		F6816B902A6A0D04006DF352 /* UICodeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6816B8F2A6A0D04006DF352 /* XCRemoteSwiftPackageReference "UICodeKit" */;
+			productName = UICodeKit;
 		};
 		F6BF4C01299728EE00B5A834 /* VFNetwork */ = {
 			isa = XCSwiftPackageProductDependency;

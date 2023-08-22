@@ -19,7 +19,7 @@ class LoginViewModel {
     // MARK: Properties
     
     let model: LoginModel
-    let router: UnownedRouter<LoginRoute>
+    let router: UnownedRouter<LoginRoute>?
     let service: LoginService
     let keychain = KeychainSwift()
     
@@ -29,7 +29,7 @@ class LoginViewModel {
     
     init(model: LoginModel = .init(),
          service: LoginService = .init(),
-         router: UnownedRouter<LoginRoute>) {
+         router: UnownedRouter<LoginRoute>? = nil) {
         self.model = model
         self.service = service
         self.router = router
@@ -52,6 +52,6 @@ class LoginViewModel {
     }
     
     func goToHome() {
-        router.trigger(.home)
+        router?.trigger(.home)
     }
 }
