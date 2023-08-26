@@ -34,6 +34,7 @@ class LoginViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Sign In"
         setupActions()
     }
     

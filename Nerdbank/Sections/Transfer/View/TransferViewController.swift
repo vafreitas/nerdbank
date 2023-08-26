@@ -93,15 +93,15 @@ extension TransferViewController: UITableViewDelegate, UITableViewDataSource {
         let label = UILabel()
         label.frame = CGRect.init(x: 0, y: 0,
                                   width: headerView.frame.width - 10,
-                                  height: headerView.frame.height - 20)
+                                  height: headerView.frame.height)
         label.text = viewModel.model.sections[section].title
         label.font = .systemFont(ofSize: 20, weight: .heavy)
-        label.textColor = UIColor(hexString: "1B382C")
+        label.textColor = UIColor(named: "transfer-fav-text")
         headerView.addSubview(label)
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        40
+        50
     }
 }

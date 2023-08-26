@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,16 +24,16 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-fG-NKv">
                     <rect key="frame" x="16" y="78" width="361" height="48"/>
-                    <color key="backgroundColor" red="0.078431372549019607" green="0.58431372549019611" blue="0.37254901960784315" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" name="transfer-bt-background"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="chZ-i8-RbO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                    <color key="tintColor" red="0.1058823529" green="0.21960784310000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="tintColor" name="transfer-bt-title"/>
                     <inset key="titleEdgeInsets" minX="-28" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="-440" maxY="0.0"/>
                     <state key="normal" title="Nova Transferência" image="new_transfer_ico">
-                        <color key="titleColor" red="0.1058823529" green="0.21960784310000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" name="transfer-bt-title"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                     </state>
                     <connections>
@@ -40,7 +41,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ndu-kI-0Y5">
-                    <rect key="frame" x="0.0" y="146" width="393" height="706"/>
+                    <rect key="frame" x="0.0" y="154" width="393" height="698"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -50,7 +51,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ndu-kI-0Y5" secondAttribute="trailing" id="RC2-rY-Tt8"/>
                 <constraint firstItem="mBl-fG-NKv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Rpe-6q-ITA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mBl-fG-NKv" secondAttribute="trailing" constant="16" id="aUY-L9-7qa"/>
-                <constraint firstItem="ndu-kI-0Y5" firstAttribute="top" secondItem="mBl-fG-NKv" secondAttribute="bottom" constant="20" id="enC-nC-Oh4"/>
+                <constraint firstItem="ndu-kI-0Y5" firstAttribute="top" secondItem="mBl-fG-NKv" secondAttribute="bottom" constant="28" id="enC-nC-Oh4"/>
                 <constraint firstItem="ndu-kI-0Y5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iYq-uk-yf1"/>
                 <constraint firstAttribute="bottom" secondItem="ndu-kI-0Y5" secondAttribute="bottom" id="y7E-le-yNy"/>
             </constraints>
@@ -59,6 +60,12 @@
     </objects>
     <resources>
         <image name="new_transfer_ico" width="32" height="32"/>
+        <namedColor name="transfer-bt-background">
+            <color red="0.078431372549019607" green="0.58431372549019611" blue="0.37254901960784315" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="transfer-bt-title">
+            <color red="0.10588235294117647" green="0.2196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
