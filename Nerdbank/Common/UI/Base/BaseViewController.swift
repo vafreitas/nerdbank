@@ -57,7 +57,12 @@ class BaseViewController: UIViewController {
     init() {
         self.isLoading = false
         self.navigationIsHidden = false
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
         super.init(nibName: nil, bundle: nil)
+        self.navigationItem.backBarButtonItem = backButton
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
+        UINavigationBar.appearance().tintColor = UIColor(named: "navbar-back")  
     }
     
     required init?(coder: NSCoder) {

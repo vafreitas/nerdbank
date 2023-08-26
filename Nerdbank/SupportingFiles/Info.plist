@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>É solicitado o acesso o dace id para que fique mais seguro.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>É solicitado o acesso a galeria para que selecione uma foto.</string>
 	<key>NSCameraUsageDescription</key>

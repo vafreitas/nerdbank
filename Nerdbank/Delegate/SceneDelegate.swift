@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -38,8 +39,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Called when the scene has moved from an inactive state to an active state.
-        // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+//        authenticateWithFaceID()
+    }
+    
+    // MARK: Authentication
+    
+    func authenticateWithFaceID() {
+        let context = LAContext()
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Autenticação necessária para acessar o aplicativo") { success, error in
+                if success {
+                    // Autenticação bem-sucedida, o usuário voltou ao aplicativo
+                } else {
+                    if let error = error as? LAError {
+                        // Tratar erros de autenticação
+                        print("Erro de autenticação: \(error.localizedDescription)")
+                    }
+                }
+            }
+        } else {
+            // O dispositivo não suporta autenticação biométrica
+            print("Autenticação biométrica não disponível")
+        }
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
